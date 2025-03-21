@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <ThingDef>
+        <defName>MSS_Haunted_HauntedThingFlyer</defName>
+        <label>HauntedThingFlyer</label>
+        <thingClass>MSS_Haunted.Utils.HauntedThingFlyer</thingClass>
+        <tickerType>Normal</tickerType>
+    </ThingDef>
+    <ThingDef>
+        <defName>MSS_Haunted_HauntedThingTargetFlyer</defName>
+        <label>HauntedThingTargetFlyer</label>
+        <thingClass>MSS_Haunted.Utils.HauntedThingFlyer</thingClass>
+        <tickerType>Normal</tickerType>
+    </ThingDef>
+</Defs>

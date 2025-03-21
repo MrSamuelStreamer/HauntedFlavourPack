@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <IncidentDef>
+        <defName>MSS_Haunted_Possession</defName>
+        <label>posession</label>
+        <category>Special</category>
+        <minRefireDays>6</minRefireDays>
+        <baseChance>5</baseChance>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass>
+        <requireColonistsPresent>true</requireColonistsPresent>
+        <pointsScaleable>true</pointsScaleable>
+        <ignoreRecentSelectionWeighting>true</ignoreRecentSelectionWeighting>
+    </IncidentDef>
+</Defs>

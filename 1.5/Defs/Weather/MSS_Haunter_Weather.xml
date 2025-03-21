@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WeatherDef>
+    <defName>MSS_Haunted_Thunderstorm</defName>
+    <label>haunting thunderstorm</label>
+    <isBad>true</isBad>
+      <canOccurAsRandomForcedEvent>false</canOccurAsRandomForcedEvent>
+    <description>The lightning will start fires, but the rain will put it out. The rain also reduces movement speed and shooting accuracy.</description>
+    <temperatureRange>0~999</temperatureRange>
+    <windSpeedFactor>3</windSpeedFactor>
+    <windSpeedOffset>1.25</windSpeedOffset>
+    <favorability>VeryBad</favorability>
+    <perceivePriority>3</perceivePriority>
+    <weatherThought>SoakingWet</weatherThought>
+    <accuracyMultiplier>0.8</accuracyMultiplier>
+    <rainRate>1</rainRate>
+    <moveSpeedMultiplier>0.8</moveSpeedMultiplier>
+      <transitionTicksOverride>120</transitionTicksOverride>
+    <ambientSounds>
+      <li>Ambient_Wind_Storm</li>
+      <li>Ambient_Rain</li>
+    </ambientSounds>
+    <durationRange>15000~40000</durationRange>
+    <eventMakers>
+        <li>
+            <averageInterval>30</averageInterval>
+            <eventClass>WeatherEvent_LightningFlash</eventClass>
+        </li>
+        <li>
+            <averageInterval>30</averageInterval>
+            <eventClass>WeatherEvent_LightningStrike</eventClass>
+        </li>
+        <li>
+            <averageInterval>80</averageInterval>
+            <eventClass>WeatherEvent_LightningFlash</eventClass>
+        </li>
+        <li>
+            <averageInterval>80</averageInterval>
+            <eventClass>WeatherEvent_LightningStrike</eventClass>
+        </li>
+        <li>
+            <averageInterval>110</averageInterval>
+            <eventClass>WeatherEvent_LightningFlash</eventClass>
+        </li>
+        <li>
+            <averageInterval>110</averageInterval>
+            <eventClass>WeatherEvent_LightningStrike</eventClass>
+        </li>
+    </eventMakers>
+    <overlayClasses>
+      <li>WeatherOverlay_Rain</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0)</li>
+        <li>(1300, 1)</li>
+        <li>(4000, 2.0)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <!-- Colors are Overcast -->
+    <skyColorsDay>
+      <sky>(0.9,0.8,0.8)</sky>
+      <shadow>(1,0.8,0.8)</shadow>
+      <overlay>(0.7,0.7,0.7)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(1,1,1)</sky>
+      <shadow>(1,0.8,0.8)</shadow>
+      <overlay>(0.6,0.6,0.6)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.55,0.40,0.45)</sky>
+      <shadow>(1,0.8,0.8)</shadow>
+      <overlay>(0.5,0.5,0.5)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.55,0.40,0.45)</sky>
+      <shadow>(1,0.8,0.8)</shadow>
+      <overlay>(0.5,0.5,0.5)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightMid>
+  </WeatherDef>
+</Defs>

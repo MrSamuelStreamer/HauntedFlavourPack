@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace Mr_Samuel_Streamer's_Haunted_Flavour_Pack;
+namespace MSS_Haunted;
 
 public class Settings : ModSettings
 {
@@ -12,13 +12,13 @@ public class Settings : ModSettings
     {
         var options = new Listing_Standard();
         options.Begin(wrect);
-        
-        options.CheckboxLabeled("Mr Samuel Streamer's Haunted Flavour Pack_Settings_SettingName".Translate(), ref setting);
+
+        options.CheckboxLabeled("MSS_Haunted_Settings_SettingName".Translate(), ref setting);
         options.Gap();
 
         options.End();
     }
-    
+
     public override void ExposeData()
     {
         Scribe_Values.Look(ref setting, "setting", true);

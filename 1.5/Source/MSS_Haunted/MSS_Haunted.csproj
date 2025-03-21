@@ -79,6 +79,9 @@
         <ReleaseFiles Update="..\..\Defs\Weather\MSS_Haunter_Weather.xml">
           <Link>HauntedFlavourPack\1.5\Defs\Weather\MSS_Haunter_Weather.xml</Link>
         </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\Needs\MSS_Haunted_Paranoia.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\Needs\MSS_Haunted_Paranoia.xml</Link>
+        </ReleaseFiles>
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Hediffs\" />

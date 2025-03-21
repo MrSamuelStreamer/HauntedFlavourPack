@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <NeedDef>
+        <defName>MSS_Haunted_Paranoia</defName>
+        <needClass>MSS_Haunted.Needs.Needs_Paranoia</needClass>
+        <label>Paranoia</label>
+        <description>Paranoia.</description>
+        <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+        <listPriority>321</listPriority>
+        <freezeWhileSleeping>false</freezeWhileSleeping>
+        <major>true</major>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </NeedDef>
+
+    <StatDef>
+        <defName>MSS_Haunted_Paranoia_RecoverySpeed</defName>
+        <label>Paranoia recovery rate</label>
+        <description>The speed at which paranoia dissipates.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>1.0</defaultBaseValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <showOnAnimals>false</showOnAnimals>
+        <hideAtValue>1</hideAtValue>
+        <minValue>0</minValue>
+        <displayPriorityInCategory>1405</displayPriorityInCategory>
+        <scenarioRandomizable>true</scenarioRandomizable>
+    </StatDef>
+
+    <ThoughtDef>
+        <defName>MSS_Haunted_Paranoid_Thought</defName>
+        <workerClass>MSS_Haunted.Needs.ThoughtWorker_NeedParanoia</workerClass>
+        <stages>
+            <li>
+                <label>I'm gonna snap!</label>
+                <description>They're coming to get me, I know it, I need to do something NOW!</description>
+                <baseMoodEffect>-64</baseMoodEffect>
+            </li>
+            <li>
+                <label>What do I do?</label>
+                <description>I don't know what to do, the whispers are getting louder.</description>
+                <baseMoodEffect>-32</baseMoodEffect>
+            </li>
+            <li>
+                <label>They're whispering</label>
+                <description>I can hear the whispers.</description>
+                <baseMoodEffect>-16</baseMoodEffect>
+            </li>
+            <li>
+                <label>Are they talking about me?</label>
+                <description>I feel like they're looking at me and talking.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+            <li>
+                <label>Hmmm...</label>
+                <description>Something seems off.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+                <label>All is well</label>
+                <description>All is well.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

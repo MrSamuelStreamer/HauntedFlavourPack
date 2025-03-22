@@ -46,6 +46,9 @@
             <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
             <CopyToOutputDirectory>Never</CopyToOutputDirectory>
         </Content>
+        <Content Include="..\..\..\modlist.xml">
+          <Link>HauntedFlavourPack\modlist.xml</Link>
+        </Content>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -82,9 +85,32 @@
         <ReleaseFiles Update="..\..\Defs\Needs\MSS_Haunted_Paranoia.xml">
           <Link>HauntedFlavourPack\1.5\Defs\Needs\MSS_Haunted_Paranoia.xml</Link>
         </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\Hediffs\MSS_Haunted_Test_Hediff.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\Hediffs\MSS_Haunted_Test_Hediff.xml</Link>
+        </ReleaseFiles>
+        <CompatibilityFiles Update="..\..\..\Compatibility\MrKociak.CyberpsychosisMod\1.5\Patches\CyberPsycosis.xml">
+          <Link>HauntedFlavourPack\Compatibility\MrKociak.CyberpsychosisMod\1.5\Patches\CyberPsycosis.xml</Link>
+        </CompatibilityFiles>
+        <CommonFiles Update="..\..\..\Common\Languages\English\Keyed\MrKociak.CyberpsychosisMod.xml">
+          <Link>HauntedFlavourPack\Common\Languages\English\Keyed\MrKociak.CyberpsychosisMod.xml</Link>
+        </CommonFiles>
+        <CommonFiles Update="..\..\..\Common\Languages\English\DefInjected\MrKociak.CyberpsychosisMod.xml">
+          <Link>HauntedFlavourPack\Common\Languages\English\DefInjected\MrKociak.CyberpsychosisMod.xml</Link>
+        </CommonFiles>
+        <ReleaseFiles Update="..\..\Patches\MSS_Haunted_Mutations.xml">
+          <Link>HauntedFlavourPack\1.5\Patches\MSS_Haunted_Mutations.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\Needs\MSS_Haunted_MutationalStability.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\Needs\MSS_Haunted_MutationalStability.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\Stats\MSS_Haunted_MysticalSensitivity.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\Stats\MSS_Haunted_MutationalStability.xml</Link>
+        </ReleaseFiles>
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Hediffs\" />
+      <Folder Include="..\..\..\Compatibility\">
+        <Link>HauntedFlavourPack\Compatibility</Link>
+      </Folder>
     </ItemGroup>
     <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
         <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory="..\..\.."/>

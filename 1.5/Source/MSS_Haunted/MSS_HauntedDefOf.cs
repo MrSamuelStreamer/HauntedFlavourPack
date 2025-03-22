@@ -18,5 +18,7 @@ public static class MSS_HauntedDefOf
     public static readonly NeedDef MSS_Haunted_Paranoia;
     public static readonly StatDef MSS_Haunted_Paranoia_RecoverySpeed;
 
+    public static readonly StatDef MSS_Haunted_MysticalSensitivity;
+
     static MSS_HauntedDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MSS_HauntedDefOf));
 }

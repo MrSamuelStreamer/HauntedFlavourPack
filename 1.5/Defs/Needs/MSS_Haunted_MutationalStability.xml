@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <NeedDef>
+        <defName>MSS_Haunted_MutationalStability</defName>
+        <needClass>MSS_Haunted.Needs.Needs_MutationalStability</needClass>
+        <label>Mutational Stability</label>
+        <description>Mutational Stability.</description>
+        <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+        <listPriority>321</listPriority>
+        <freezeWhileSleeping>false</freezeWhileSleeping>
+        <major>true</major>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </NeedDef>
+
+    <ThoughtDef>
+        <defName>MSS_Haunted_MutationalStability_Thought</defName>
+        <workerClass>MSS_Haunted.Needs.ThoughtWorker_NeedMutationalStability</workerClass>
+        <stages>
+            <li>
+                <label>I'm gonna do it!</label>
+                <description>I'm going to do what the mutations are telling me.</description>
+                <baseMoodEffect>-64</baseMoodEffect>
+            </li>
+            <li>
+                <label>They're telling me to do things</label>
+                <description>I think I should listen to the mutations. They're making sense.</description>
+                <baseMoodEffect>-32</baseMoodEffect>
+            </li>
+            <li>
+                <label>I can hear them.</label>
+                <description>I think the mutations are talking to me.</description>
+                <baseMoodEffect>-16</baseMoodEffect>
+            </li>
+            <li>
+                <label>This feels horrible</label>
+                <description>These mutations are disgusting, it's unnatural.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+            <li>
+                <label>This is weird</label>
+                <description>I don't like this thing being part of me.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+                <label>All is well</label>
+                <description>All is well.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

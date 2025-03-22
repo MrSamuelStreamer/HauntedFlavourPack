@@ -17,7 +17,7 @@
         <label>Paranoia recovery rate</label>
         <description>The speed at which paranoia dissipates.</description>
         <category>BasicsPawn</category>
-        <defaultBaseValue>1.0</defaultBaseValue>
+        <defaultBaseValue>0.1</defaultBaseValue>
         <toStringStyle>PercentZero</toStringStyle>
         <showOnAnimals>false</showOnAnimals>
         <hideAtValue>1</hideAtValue>

@@ -2,4 +2,8 @@
 <LanguageData>
     <MSS_Haunted_SettingsCategory>MSS_Haunted</MSS_Haunted_SettingsCategory>
     <MSS_Haunted_Settings_SettingName>Some Setting</MSS_Haunted_Settings_SettingName>
+
+    <MSS_Haunted_LetterLabelGeneGiver>Mutation</MSS_Haunted_LetterLabelGeneGiver>
+    <MSS_Haunted_LetterTextGeneGiver>{PAWN} has mutated, gaining: {1}.</MSS_Haunted_LetterTextGeneGiver>
+    <MSS_Haunted_LetterTextGeneGiverFullXenotype>{PAWN} has mutated, becoming a {1}.</MSS_Haunted_LetterTextGeneGiverFullXenotype>
 </LanguageData>

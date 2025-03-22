@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/HediffDef[@ParentName="AddedMutationBase"]</xpath>
+        <value>
+            <li Class="MSS_Haunted.ModExtensions.MutationDefModExtension">
+            </li>
+        </value>
+    </Operation>
+</Patch>

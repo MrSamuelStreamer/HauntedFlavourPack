@@ -4,11 +4,8 @@ using Verse;
 
 namespace MSS_Haunted.Needs;
 
-public class Needs_Paranoia : Need
+public class Needs_Paranoia(Pawn pawn) : Need(pawn)
 {
-    public Needs_Paranoia(Pawn pawn)
-        : base(pawn) { }
-
     public override bool ShowOnNeedList
     {
         get { return !Disabled; }

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Patch>
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/IncidentDef[defName="AE_BloodLakeWeatherBloodFog"]</xpath>
+        <value>
+            <li Class="MSS_Haunted.ModExtensions.AdditionalHauntedIncidentsModExtension">
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/IncidentDef[defName="AE_IncidentDef_BloodPuddleSpawn"]</xpath>
+        <value>
+            <li Class="MSS_Haunted.ModExtensions.AdditionalHauntedIncidentsModExtension">
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/IncidentDef[defName="AE_IncidentDef_BloodLakeSpawn"]</xpath>
+        <value>
+            <li Class="MSS_Haunted.ModExtensions.AdditionalHauntedIncidentsModExtension">
+            </li>
+        </value>
+    </Operation>
+</Patch>

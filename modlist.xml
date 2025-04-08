@@ -1,17 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-    <version>1.5.4402 rev723</version>
+    <version>1.5.4409 rev1118</version>
     <activeMods>
+        <li>zetrith.prepatcher</li>
         <li>brrainz.harmony</li>
+        <li>taranchuk.fastergameloading</li>
+        <li>bs.fishery</li>
         <li>ludeon.rimworld</li>
+        <li>bs.performance</li>
         <li>ludeon.rimworld.royalty</li>
         <li>ludeon.rimworld.ideology</li>
         <li>ludeon.rimworld.biotech</li>
         <li>ludeon.rimworld.anomaly</li>
+        <li>unlimitedhugs.hugslib</li>
         <li>oskarpotocki.vanillafactionsexpanded.core</li>
+        <li>ryflamer.other.cosmichorrors</li>
+        <li>latta.fsharp.core</li>
+        <li>latta.petknowstrueyou</li>
+        <li>anthitei.athsstyleableframework.style</li>
+        <li>anthitei.athsstylegothic.style</li>
+        <li>unlimitedhugs.allowtool</li>
+        <li>sarg.magicalmenagerie</li>
+        <li>ferny.ambiguousanomaly</li>
+        <li>botchjob.ancientarmory</li>
+        <li>botchjob.ancientarmoryforancients</li>
+        <li>mrhydralisk.anomaliesexpected</li>
+        <li>fallen.anomaliesexpectedaddon</li>
+        <li>viva.ace</li>
+        <li>22.anomalyportal</li>
+        <li>misstall.bioftorchbeltz</li>
+        <li>isorex.communityframework</li>
+        <li>van.dacrypts</li>
+        <li>van.datools</li>
+        <li>carnysenpai.enableoversizedweapons</li>
+        <li>sharpie.eldenrima</li>
+        <li>nunahuralshamikh.entosomnia</li>
+        <li>det.epochsincense</li>
+        <li>det.epochspottery</li>
+        <li>botchjob.medievalfantasyquestrewards</li>
+        <li>sirmashedpotato.medievaldruglab</li>
+        <li>oskarpotocki.vfe.medieval2</li>
+        <li>syrchalis.processor.framework</li>
+        <li>dankpyon.medieval.overhaul</li>
+        <li>serek.fantasyquestrewardsretextured</li>
+        <li>lts.pg</li>
+        <li>biomesteam.biomescore</li>
+        <li>pphhyy.gulden</li>
+        <li>botchjob.hthair</li>
+        <li>mosi.horaxianstylepatch</li>
+        <li>joeownage.hunterphageequip</li>
+        <li>grillmaster.integratedcreepjoiners</li>
+        <li>serek.fantasyquestrewardsretexture</li>
+        <li>botchjob.medievalfantasyrareresources</li>
+        <li>botchjob.medievalfantasythemedrelicquests</li>
+        <li>ferny.replacelib</li>
+        <li>joeownage.overlap.remover</li>
+        <li>flestal.mig</li>
+        <li>xrushha.metalhorrorsunleashed</li>
+        <li>mosi.bioferriteore</li>
+        <li>haplo.miscellaneous.training</li>
+        <li>serek.misctrainingmedievalretexture</li>
         <li>mss.flavourpack</li>
         <li>mss.haunted</li>
+        <li>gogatio.newanomalythreats</li>
+        <li>rangelhreale173.pawnhbadge</li>
+        <li>zal.goldrush</li>
+        <li>phaneron.goldrushretexture</li>
+        <li>botchjob.possessedweapons</li>
+        <li>vanillaexpanded.vpsycastse</li>
+        <li>mrsamuelstreamer.rpgadventureflavour</li>
+        <li>mingtuwuxiang.gothicdecorative</li>
+        <li>nm93.p.musgvf</li>
+        <li>mosi.sharddagger</li>
         <li>vanillaexpanded.vanomalyeinsanity</li>
+        <li>blackkanye.shardpsylinkneuroformer</li>
+        <li>shavius.medieval.flavour</li>
+        <li>283.simplyequipment</li>
+        <li>koni.misc.steamworlddefenses</li>
+        <li>ebsg.framework</li>
+        <li>artemiish.supernaturalweapons</li>
+        <li>trickity.seal.spirits</li>
+        <li>botchjob.profaned</li>
+        <li>vpe.horaxian.sentinel</li>
+        <li>sirvan.hemogentexture</li>
+        <li>ogliss.thewhitecrayon.quarry</li>
+        <li>sirvan.quarryretexture</li>
+        <li>vanillaexpanded.vpe.hemosage</li>
+        <li>vanillaexpanded.vpe.puppeteer</li>
+        <li>vanillaexpanded.vwebf</li>
+        <li>gunmar.victorianeraapparels</li>
+        <li>mos.victoriandecorations</li>
+        <li>jackledead.patch.gothretheme</li>
+        <li>tgh.soulgems</li>
+        <li>wemd.realisticdarknesslight</li>
+        <li>pphhyy.bonereapers</li>
+        <li>pphhyy.sanguinaryanimals</li>
+        <li>pphhyy.lightlessempyrean</li>
     </activeMods>
     <knownExpansions>
         <li>ludeon.rimworld</li>

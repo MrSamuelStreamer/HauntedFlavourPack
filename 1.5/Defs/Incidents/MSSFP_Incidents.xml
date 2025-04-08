@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <Defs>
+    <IncidentCategoryDef>
+        <defName>MSS_Haunted</defName>
+        <needsParmsPoints>true</needsParmsPoints>
+    </IncidentCategoryDef>
+
     <IncidentDef>
         <defName>MSS_Haunted_Possession</defName>
         <label>posession</label>
@@ -14,5 +19,75 @@
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>
         <ignoreRecentSelectionWeighting>true</ignoreRecentSelectionWeighting>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>MSS_Haunted_PoltergeistSmall</defName>
+        <label>poltergeist</label>
+        <category>MSS_Haunted</category>
+        <minRefireDays>30</minRefireDays>
+        <baseChance>2</baseChance>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <requireColonistsPresent>true</requireColonistsPresent>
+        <pointsScaleable>true</pointsScaleable>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>MSS_Haunted_PoltergeistBig</defName>
+        <label>poltergeist</label>
+        <category>MSS_Haunted</category>
+        <minRefireDays>30</minRefireDays>
+        <baseChance>1</baseChance>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <requireColonistsPresent>true</requireColonistsPresent>
+        <pointsScaleable>true</pointsScaleable>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>MSS_Haunted_Apparitions</defName>
+        <label>apparitions</label>
+        <category>MSS_Haunted</category>
+        <minRefireDays>30</minRefireDays>
+        <baseChance>1</baseChance>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <requireColonistsPresent>true</requireColonistsPresent>
+        <pointsScaleable>true</pointsScaleable>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>MSS_Haunted_ShadowPeople</defName>
+        <label>shadown people</label>
+        <category>MSS_Haunted</category>
+        <minRefireDays>30</minRefireDays>
+        <baseChance>1</baseChance>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <requireColonistsPresent>true</requireColonistsPresent>
+        <pointsScaleable>true</pointsScaleable>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>MSS_Haunted_ShadowPeople</defName>
+        <label>shadown people</label>
+        <category>MSS_Haunted</category>
+        <minRefireDays>30</minRefireDays>
+        <baseChance>1</baseChance>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <requireColonistsPresent>true</requireColonistsPresent>
+        <pointsScaleable>true</pointsScaleable>
     </IncidentDef>
 </Defs>

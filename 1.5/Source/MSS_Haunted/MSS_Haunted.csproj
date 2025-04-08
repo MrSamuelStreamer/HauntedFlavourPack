@@ -106,11 +106,12 @@
         <ReleaseFiles Update="..\..\Defs\Stats\MSS_Haunted_MysticalSensitivity.xml">
           <Link>HauntedFlavourPack\1.5\Defs\Stats\MSS_Haunted_MutationalStability.xml</Link>
         </ReleaseFiles>
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="..\..\..\Compatibility\">
-        <Link>HauntedFlavourPack\Compatibility</Link>
-      </Folder>
+        <ReleaseFiles Update="..\..\Patches\MSS_Haunted_Storyteller.xml">
+          <Link>HauntedFlavourPack\1.5\Patches\MSS_Haunted_Storyteller.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Include="..\..\..\Compatibility\MrHydralisk.AnomaliesExpected\1.5\Patches\MSS_Haunted_Storyteller.xml">
+          <Link>HauntedFlavourPack\Compatibility\MrHydralisk.AnomaliesExpected\1.5\Patches\MSS_Haunted_Storyteller.xml</Link>
+        </ReleaseFiles>
     </ItemGroup>
     <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
         <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory="..\..\.."/>

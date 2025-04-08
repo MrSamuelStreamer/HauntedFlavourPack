@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+        <value>
+            <li Class="MSS_Haunted.Storyteller.StorytellerCompProperties_Possession">
+                <baseMtbDaysPerPossessed>20</baseMtbDaysPerPossessed>
+                <IntensityScaleByDays>
+                    <li>0,1</li>
+                    <li>15, 1.05</li>
+                    <li>30, 1.15</li>
+                    <li>60, 1.40</li>
+                    <li>120, 2</li>
+                    <li>240, 5</li>
+                    <li>480, 20</li>
+                </IntensityScaleByDays>
+                <allowedTargetTags>
+                    <li>Map_PlayerHome</li>
+                    <li>Map_TempIncident</li>
+                    <li>Map_Misc</li>
+                    <li>Map_RaidBeacon</li>
+                </allowedTargetTags>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/IncidentDef[defName="UnnaturalDarkness"]</xpath>
+        <value>
+            <li Class="MSS_Haunted.ModExtensions.AdditionalHauntedIncidentsModExtension">
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/IncidentDef[defName="DeathPall"]</xpath>
+        <value>
+            <li Class="MSS_Haunted.ModExtensions.AdditionalHauntedIncidentsModExtension">
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/IncidentDef[defName="MysteriousCargoUnnaturalCorpse"]</xpath>
+        <value>
+            <li Class="MSS_Haunted.ModExtensions.AdditionalHauntedIncidentsModExtension">
+            </li>
+        </value>
+    </Operation>
+</Patch>

@@ -42,6 +42,7 @@
                 </offsets>
                 <onlyRenderWhenDrafted>true</onlyRenderWhenDrafted>
             </li>
+            <li Class="MSS_Haunted.Hediffs.HediffCompProperties_TimeTracker"/>
         </comps>
     </HediffDef>
 

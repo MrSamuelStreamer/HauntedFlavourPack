@@ -20,5 +20,7 @@ public static class MSS_HauntedDefOf
 
     public static readonly StatDef MSS_Haunted_MysticalSensitivity;
 
+    public static readonly IncidentCategoryDef MSS_Haunted;
+
     static MSS_HauntedDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MSS_HauntedDefOf));
 }

@@ -29,8 +29,8 @@
                 <OnTimeTicksRange>600~6000</OnTimeTicksRange>
                 <OffTimeTicksRange>6000~60000</OffTimeTicksRange>
                 <graphicData>
-                    <texPath>Haunts/Frog/Frog</texPath>
-                    <graphicClass>Graphic_Multi</graphicClass>
+                    <texPath>UI/MSS_FP_Haunts_Toggle</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
                     <drawSize>1.7</drawSize>
                     <shaderType>MoteGlow</shaderType>
                 </graphicData>
@@ -40,7 +40,7 @@
                     <li>(0.3, -1.6, 0.65)</li> <!-- South -->
                     <li>(0.5, 1.1, -0.35)</li> <!-- West -->
                 </offsets>
-                <onlyRenderWhenDrafted>true</onlyRenderWhenDrafted>
+                <onlyRenderWhenDrafted>false</onlyRenderWhenDrafted>
             </li>
             <li Class="MSS_Haunted.Hediffs.HediffCompProperties_TimeTracker"/>
         </comps>
@@ -58,4 +58,52 @@
         </stages>
         <durationDays>0.2</durationDays>
     </ThoughtDef>
+
+
+    <HediffDef>
+        <defName>MSS_Haunted_ApparitionHaunt</defName>
+        <label>Apparitions</label>
+        <description>This person is seeing apparitions.</description>
+        <hediffClass>MSSFP.Hediffs.HiddenHediffWithComps</hediffClass>
+        <defaultLabelColor>(0.1,0.2,0.8)</defaultLabelColor>
+        <maxSeverity>1.0</maxSeverity>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <isBad>true</isBad>
+        <tendable>false</tendable>
+        <initialSeverity>1</initialSeverity>
+        <stages>
+            <li>
+                <minSeverity>0</minSeverity>
+                <label>presence</label>
+                <statFactors>
+                    <RestFallRateFactor>1.2</RestFallRateFactor>
+                    <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>1.5</severityPerDay>
+            </li>
+            <li Class="MSSFP.Hediffs.HediffCompProperties_Haunt">
+                <CanTransferInProximity>false</CanTransferInProximity>
+
+                <OnTimeTicksRange>600~6000</OnTimeTicksRange>
+                <OffTimeTicksRange>600~6000</OffTimeTicksRange>
+                <graphicData>
+                    <texPath>UI/MSS_FP_Haunts_Toggle</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <drawSize>1.7</drawSize>
+                    <shaderType>MoteGlow</shaderType>
+                </graphicData>
+                <offsets>
+                    <li>(0.3, 1.6, -0.55)</li> <!-- North -->
+                    <li>(-0.5, 1.1, -0.35)</li> <!-- East -->
+                    <li>(0.3, -1.6, 0.65)</li> <!-- South -->
+                    <li>(0.5, 1.1, -0.35)</li> <!-- West -->
+                </offsets>
+                <onlyRenderWhenDrafted>false</onlyRenderWhenDrafted>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>

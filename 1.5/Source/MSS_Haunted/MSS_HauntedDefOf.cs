@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using Verse;
+using Verse.AI;
 
 namespace MSS_Haunted;
 
@@ -21,6 +22,15 @@ public static class MSS_HauntedDefOf
     public static readonly StatDef MSS_Haunted_MysticalSensitivity;
 
     public static readonly IncidentCategoryDef MSS_Haunted;
+
+    public static readonly IncidentDef MSS_Haunted_PoltergeistSmall;
+    public static readonly HediffDef MSS_Haunted_ApparitionHaunt;
+    public static readonly HediffDef MSS_Haunted_ShadowPersonInvisibility;
+
+    public static readonly DutyDef MSS_Haunted_ShadowPersonSwarm;
+    public static readonly ThingDef MSS_Haunted_ShadowPerson;
+    public static readonly PawnGroupKindDef MSS_Haunted_Shadows;
+    public static readonly FactionDef MSSFP_HauntedFaction;
 
     static MSS_HauntedDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MSS_HauntedDefOf));
 }

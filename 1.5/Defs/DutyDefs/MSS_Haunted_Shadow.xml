@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+
+    <DutyDef>
+        <defName>MSS_Haunted_ShadowPersonSwarm</defName>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <!-- Goto travel destination if reachable -->
+                <li Class="JobGiver_GotoTravelDestination">
+                    <wanderOnArrival>true</wanderOnArrival>
+                    <locomotionUrgency>Amble</locomotionUrgency>
+                </li>
+
+                <li Class="JobGiver_ShamblerWander">
+                    <wanderRadius>50</wanderRadius>
+                </li>
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+</Defs>

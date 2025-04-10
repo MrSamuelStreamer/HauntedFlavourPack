@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <ThinkTreeDef>
+        <defName>MSS_Haunted_ShadowPerson</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <!-- Despawned -->
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>Despawned</treeDef>
+                </li>
+
+                <!-- Downed -->
+                <li Class="ThinkNode_ConditionalDowned">
+                    <subNodes>
+                        <!-- Downed and can't crawl -->
+                        <li Class="ThinkNode_ConditionalCanCrawl">
+                            <invert>true</invert>
+                            <subNodes>
+                                <li Class="ThinkNode_Subtree">
+                                    <treeDef>Downed</treeDef>
+                                </li>
+                            </subNodes>
+                        </li>
+                    </subNodes>
+                </li>
+
+                <!-- Do a queued job -->
+                <li Class="ThinkNode_QueuedJob" />
+
+                <!-- Lord directives -->
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>LordDuty</treeDef>
+                </li>
+
+                <li Class="JobGiver_ShamblerFight">
+                    <targetAcquireRadius>20</targetAcquireRadius>
+                    <targetKeepRadius>30</targetKeepRadius>
+                </li>
+
+                <li Class="JobGiver_ShamblerWander">
+                    <wanderRadius>5</wanderRadius>
+                </li>
+
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+
+
+    <ThinkTreeDef>
+        <defName>MSS_Haunted_ShadowPersonConstant</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <!-- Despawned -->
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>Despawned</treeDef>
+                </li>
+
+                <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+                    <subNodes>
+                        <!-- Lord directives -->
+                        <li Class="ThinkNode_Subtree">
+                            <treeDef>LordDutyConstant</treeDef>
+                        </li>
+                    </subNodes>
+                </li>
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+</Defs>

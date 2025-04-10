@@ -4,9 +4,9 @@ using Verse;
 
 namespace MSS_Haunted.Needs;
 
-public class ThoughtWorker_NeedMutationalStabilityStage : ThoughtWorker
+public class ThoughtWorker_NeedMutationalStability : ThoughtWorker
 {
-    public ThoughtWorker_NeedMutationalStabilityStage()
+    public ThoughtWorker_NeedMutationalStability()
         : base() { }
 
     protected override ThoughtState CurrentStateInternal(Pawn p)

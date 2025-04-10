@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <PawnRenderTreeDef>
+    <defName>MSS_Haunted_ShadowPerson</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+    <ThingDef ParentName="BasePawn">
+        <defName>MSS_Haunted_ShadowPerson</defName>
+        <tickerType>Normal</tickerType>
+        <label>shadow person</label>
+        <description>A strange shadow of a person. You can't interact with them, and they appear harmless, but it's creepy.</description>
+        <drawOffscreen>false</drawOffscreen>
+        <hideStats>true</hideStats>
+        <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <destroyable>false</destroyable>
+        <selectable>false</selectable>
+        <comps>
+            <li Class="MSS_Haunted.Comps.CompProperties_GlowWhileStanding">
+                <glowRadius>5</glowRadius>
+                <overlightRadius>3</overlightRadius>
+                <glowColor>(136, 8, 8, 0)</glowColor>
+            </li>
+        </comps>
+        <statBases>
+            <ComfyTemperatureMin>-9999</ComfyTemperatureMin>
+            <ComfyTemperatureMax>9999</ComfyTemperatureMax>
+            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+            <ArmorRating_Heat>0</ArmorRating_Heat>
+            <Flammability>0</Flammability>
+            <MeatAmount>0</MeatAmount>
+            <MoveSpeed>25.5</MoveSpeed>
+        </statBases>
+        <tradeability>None</tradeability>
+        <useHitPoints>false</useHitPoints>
+        <race>
+            <renderTree>MSS_Haunted_ShadowPerson</renderTree>
+            <body>Metalhorror</body>
+            <fleshType>None</fleshType>
+            <thinkTreeMain>MSS_Haunted_ShadowPerson</thinkTreeMain>
+            <thinkTreeConstant>MSS_Haunted_ShadowPersonConstant</thinkTreeConstant>
+            <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+            <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+            <foodType>None</foodType>
+            <needsRest>false</needsRest>
+            <hasGenders>false</hasGenders>
+            <bloodDef IsNull="True" />
+            <hasMeat>false</hasMeat>
+            <lifeExpectancy>250</lifeExpectancy>
+            <baseHealthScale>0.6</baseHealthScale>
+            <gestationPeriodDays>10</gestationPeriodDays>
+            <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+            <disableIgniteVerb>true</disableIgniteVerb>
+            <trainability>None</trainability>
+            <hasCorpse>false</hasCorpse>
+            <showTrainables>false</showTrainables>
+            <canBecomeShambler>false</canBecomeShambler>
+            <isImmuneToInfections>true</isImmuneToInfections>
+            <alwaysAwake>true</alwaysAwake>
+            <makesFootprints>true</makesFootprints>
+            <hideTrainingTab>true</hideTrainingTab>
+            <roamMtbDays>1</roamMtbDays>
+            <lifeStageAges Inherit="False">
+                <li>
+                    <def>EntityFullyFormed</def>
+                </li>
+            </lifeStageAges>
+        </race>
+    </ThingDef>
+
+    <HediffDef>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defName>MSS_Haunted_ShadowPersonInvisibility</defName>
+        <label>shadow person invisibility</label>
+        <description>This creature is psychically twisting the perceptions of humans, animals, and machines in the vicinity in such a way as to seem invisible. The eye receives their image as normal but the mind cannot perceive it.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="MSS_Haunted.Hediffs.HediffCompProperties_ShadowInvisibility">
+            </li>
+        </comps>
+    </HediffDef>
+
+    <PawnKindDef>
+        <defName>MSS_Haunted_ShadowPerson</defName>
+        <label>shadow person</label>
+        <race>MSS_Haunted_ShadowPerson</race>
+        <combatPower>100</combatPower>
+        <startingHediffs>
+            <li>
+                <def>MSS_Haunted_ShadowPersonInvisibility</def>
+            </li>
+        </startingHediffs>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>MSS_Haunted_ShadowPerson</texPath>
+                    <graphicClass>Graphic_Random</graphicClass>
+                    <shadowData>
+                        <volume>(0, 0, 0)</volume>
+                    </shadowData>
+                    <drawSize>(2,2)</drawSize>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <collidesWithPawns>false</collidesWithPawns>
+        <defaultFactionType>MSSFP_HauntedFaction</defaultFactionType>
+        <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    </PawnKindDef>
+
+    <PawnGroupKindDef>
+        <defName>MSS_Haunted_Shadows</defName>
+        <workerClass>MSS_Haunted.PawnGroupKindWorker_Shadows</workerClass>
+    </PawnGroupKindDef>
+</Defs>

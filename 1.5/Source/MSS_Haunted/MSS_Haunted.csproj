@@ -112,6 +112,18 @@
         <ReleaseFiles Include="..\..\..\Compatibility\MrHydralisk.AnomaliesExpected\1.5\Patches\MSS_Haunted_Storyteller.xml">
           <Link>HauntedFlavourPack\Compatibility\MrHydralisk.AnomaliesExpected\1.5\Patches\MSS_Haunted_Storyteller.xml</Link>
         </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\ThingDefs_Misc\MSS_Haunted_Shadow.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\ThingDefs_Misc\MSS_Haunted_Shadow.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\MSS_Haunted_Factions.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\MSS_Haunted_Factions.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\ThinkTreeDefs\MSS_Haunted_Shadow.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\ThinkTreeDefs\MSS_Haunted_Shadow.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\DutyDefs\MSS_Haunted_Shadow.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\DutyDefs\MSS_Haunted_Shadow.xml</Link>
+        </ReleaseFiles>
     </ItemGroup>
     <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
         <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory="..\..\.."/>

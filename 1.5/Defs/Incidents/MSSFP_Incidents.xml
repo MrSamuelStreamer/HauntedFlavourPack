@@ -30,7 +30,7 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
-        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <workerClass>MSS_Haunted.Incidents.IncidentWorker_Poltergeist</workerClass>
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>
     </IncidentDef>
@@ -44,7 +44,7 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
-        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <workerClass>MSS_Haunted.Incidents.IncidentWorker_Poltergeist</workerClass>
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>
     </IncidentDef>
@@ -58,7 +58,7 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
-        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <workerClass>MSS_Haunted.Incidents.IncidentWorker_Apparitions</workerClass>
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>
     </IncidentDef>
@@ -72,22 +72,50 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
-        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
+        <letterLabel>Shadow people</letterLabel>
+        <letterText>Mysterious entities the colony has taken to calling "Shadow people" have appeared. They seem to wander aimlessly, passing though people as if they weren't there. When standing still, they seem to glow, while also being a shadow, in a phenomena that appears to disagree with the humanoid brain. They can't be interacted with or attacked, and don't seem hostile. This doesn't stop people being creeped out by them.</letterText>
+        <letterDef>ThreatSmall</letterDef>
+        <workerClass>MSS_Haunted.Incidents.IncidentWorker_ShadowPeople</workerClass>
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>
     </IncidentDef>
 
-    <IncidentDef>
-        <defName>MSS_Haunted_ShadowPeople</defName>
-        <label>shadown people</label>
-        <category>MSS_Haunted</category>
-        <minRefireDays>30</minRefireDays>
-        <baseChance>1</baseChance>
-        <targetTags>
-            <li>Map_PlayerHome</li>
-        </targetTags>
-        <!-- <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass> -->
-        <requireColonistsPresent>true</requireColonistsPresent>
-        <pointsScaleable>true</pointsScaleable>
-    </IncidentDef>
+    <ThoughtDef>
+        <defName>MSS_Haunted_ShadowPeopleNearMe</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MSS_Haunted.Needs.ThoughtWorker_CreepedOut</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Shadow People</label>
+                <description>They're watching me</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+            <li>
+                <label>Shadow People</label>
+                <description>They're watching me</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>Shadow People</label>
+                <description>They're watching me, they're in my head</description>
+                <baseMoodEffect>-50</baseMoodEffect>
+            </li>
+            <li>
+                <label>Shadow People</label>
+                <description>They're watching me, they're in my head</description>
+                <baseMoodEffect>-100</baseMoodEffect>
+            </li>
+            <li>
+                <label>Shadow People</label>
+                <description>They're watching me, they're in my head</description>
+                <baseMoodEffect>-200</baseMoodEffect>
+            </li>
+            <li>
+                <label>Shadow People</label>
+                <description>They're watching me, they're in my head</description>
+                <baseMoodEffect>-500</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>

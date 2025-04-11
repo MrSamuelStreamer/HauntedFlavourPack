@@ -57,7 +57,6 @@
         <classic>true</classic>
     </PreceptDef>
 
-
     <PreceptDef ParentName="MSSFPWitchTrialBase">
         <defName>MSS_Haunted_WitchTrialMentalState</defName>
         <ritualPatternBase>MSS_Haunted_WitchTrialMentalState</ritualPatternBase>
@@ -174,9 +173,18 @@
                 <curve>
                     <points>
                         <li>(0,  0.0)</li>
-                        <li>(4,  0.2)</li>
-                        <li>(10, 0.4)</li>
-                        <li>(20, 0.6)</li>
+                        <li>(4,  0.1)</li>
+                        <li>(10, 0.2)</li>
+                        <li>(20, 0.3)</li>
+                    </points>
+                </curve>
+            </li>
+            <li Class="MSS_Haunted.Rituals.RitualOutcomeComp_ParticipantParanoia">
+                <label>average paranoia</label>
+                <curve>
+                    <points>
+                        <li>(0,  0.5)</li>
+                        <li>(1,  0)</li>
                     </points>
                 </curve>
             </li>
@@ -185,14 +193,7 @@
                 <labelAbstract>Leader's negotiation ability</labelAbstract>
                 <statDef>NegotiationAbility</statDef>
                 <roleId>leader</roleId>
-                <scaledBy>0.25</scaledBy>
-            </li>
-            <li Class="RitualOutcomeComp_PawnStatScaled">
-                <label>{PAWN_labelShort}'s negotiation ability</label>
-                <labelAbstract>Defendant's negotiation ability</labelAbstract>
-                <statDef>NegotiationAbility</statDef>
-                <roleId>convict</roleId>
-                <scaledBy>-0.25</scaledBy>
+                <scaledBy>0.2</scaledBy>
             </li>
         </comps>
         <outcomeChances>
@@ -225,9 +226,18 @@
                 <curve>
                     <points>
                         <li>(0,  0.0)</li>
-                        <li>(4,  0.2)</li>
-                        <li>(10, 0.4)</li>
-                        <li>(20, 0.6)</li>
+                        <li>(4,  0.1)</li>
+                        <li>(10, 0.2)</li>
+                        <li>(20, 0.3)</li>
+                    </points>
+                </curve>
+            </li>
+            <li Class="MSS_Haunted.Rituals.RitualOutcomeComp_ParticipantParanoia">
+                <label>average paranoia</label>
+                <curve>
+                    <points>
+                        <li>(0,  0.5)</li>
+                        <li>(1,  0)</li>
                     </points>
                 </curve>
             </li>
@@ -236,7 +246,7 @@
                 <labelAbstract>Leader's negotiation ability</labelAbstract>
                 <statDef>NegotiationAbility</statDef>
                 <roleId>leader</roleId>
-                <scaledBy>0.25</scaledBy>
+                <scaledBy>0.2</scaledBy>
             </li>
         </comps>
     </RitualOutcomeEffectDef>

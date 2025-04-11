@@ -9,14 +9,15 @@
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <Optimize>false</Optimize>
         <DebugSymbols>true</DebugSymbols>
-        <DebugType>portable</DebugType>
+        <DebugType>full</DebugType>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <DebugType>none</DebugType>
+        <DebugType>pdbonly</DebugType>
         <DebugSymbols>false</DebugSymbols>
         <Optimize>true</Optimize>
     </PropertyGroup>
@@ -123,6 +124,9 @@
         </ReleaseFiles>
         <ReleaseFiles Update="..\..\Defs\DutyDefs\MSS_Haunted_Shadow.xml">
           <Link>HauntedFlavourPack\1.5\Defs\DutyDefs\MSS_Haunted_Shadow.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\AbilityDefs\MSS_Haunted_Accuse.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\AbilityDefs\MSS_Haunted_Accuse</Link>
         </ReleaseFiles>
     </ItemGroup>
     <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">

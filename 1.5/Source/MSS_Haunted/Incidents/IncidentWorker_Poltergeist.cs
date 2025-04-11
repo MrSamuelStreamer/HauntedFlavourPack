@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MSS_Haunted.Needs;
 using RimWorld;
 using Verse;
 
@@ -40,6 +41,13 @@ public class IncidentWorker_Poltergeist : IncidentWorker
         int minItems = IsSmall ? 5 : 20;
 
         target.GetComponent<HauntAnimationController>().StartHaunting(potentialTargets.RandomElementWithFallback(targetPawn), radius, hauntChance, minItems);
+
+        foreach (Pawn pawn in target.mapPawns.FreeColonistsSpawned)
+        {
+            Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+            if (need != null)
+                need.CurLevel -= 0.2f;
+        }
 
         return true;
     }

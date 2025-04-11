@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <AbilityDef ParentName="AbilityTouchBase">
+        <defName>MSS_Haunted_Accuse</defName>
+        <label>accuse!</label>
+        <description>Accuse someone of being a witch. This will calm the paranoia levels of the accuser.</description>
+        <targetRequired>True</targetRequired>
+        <iconPath>UI/Icons/Rituals/Trial</iconPath>
+        <gizmoClass>Command_Ability</gizmoClass>
+        <uiOrder>1</uiOrder>
+        <cooldownTicksRange>60000~120000</cooldownTicksRange> <!-- 1 to 2 days -->
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <showPsycastEffects>true</showPsycastEffects>
+        <hostile>false</hostile>
+        <comps>
+            <li Class="MSS_Haunted.Comps.CompProperties_AbilityAccuse">
+            </li>
+        </comps>
+        <aiCanUse>false</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <range>-1</range>
+            <warmupTime>4.5</warmupTime>
+            <targetParams>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetMutants>false</canTargetMutants>
+                <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+                <canTargetHumans>true</canTargetHumans>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <TraitDef>
+        <defName>MSS_Haunted_Accused</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>accused</label>
+                <description>{PAWN_nameDef} was accused.</description>
+                <skillGains>
+                    <Social>-3</Social>
+                </skillGains>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+</Defs>

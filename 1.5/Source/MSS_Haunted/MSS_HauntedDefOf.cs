@@ -32,5 +32,9 @@ public static class MSS_HauntedDefOf
     public static readonly PawnGroupKindDef MSS_Haunted_Shadows;
     public static readonly FactionDef MSSFP_HauntedFaction;
 
+    public static readonly TraitDef MSS_Haunted_Accused;
+
+    public static readonly AbilityDef MSS_Haunted_Accuse;
+
     static MSS_HauntedDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MSS_HauntedDefOf));
 }

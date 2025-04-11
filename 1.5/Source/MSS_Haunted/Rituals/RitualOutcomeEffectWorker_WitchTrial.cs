@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MSS_Haunted.Needs;
 using RimWorld;
 using Verse;
 
@@ -53,12 +54,14 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
         {
             accused.guilt.Notify_Guilty(900000);
             accused.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.TrialConvicted);
-            if (accused.health.hediffSet.TryGetHediff(MSS_HauntedDefOf.MSS_Haunted_PossessionHaunt, out Hediff hediff))
-            {
-                accused.health.RemoveHediff(hediff);
-                text += "\n\n" + "MSS_Haunted_PossessionHaunt_Removed".Translate(accused.Named("PAWN"));
-            }
             Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter((TaggedString)label, text, LetterDefOf.RitualOutcomePositive, letterLookTargets));
+
+            foreach (KeyValuePair<Pawn, int> tp in totalPresence)
+            {
+                Needs_Paranoia need = tp.Key.needs.TryGetNeed<Needs_Paranoia>();
+                if (need != null)
+                    need.CurLevel += 0.85f;
+            }
         }
         else
         {
@@ -66,7 +69,11 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
             judge.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.TrialFailed);
             accused.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.TrialExonerated);
 
-            if (Rand.Chance(0.5f))
+            Trait t = accused.story.traits.GetTrait(MSS_HauntedDefOf.MSS_Haunted_Accused);
+            if (t != null)
+                accused.story.traits.RemoveTrait(t);
+
+            if (Rand.Chance(0.1f))
             {
                 Pawn p = jobRitual.assignments.Participants.Where(p => p != accused && p != judge).RandomElementWithFallback();
                 if (p != null)
@@ -76,6 +83,13 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
                         accused.health.AddHediff(MSS_HauntedDefOf.MSS_Haunted_PossessionHaunt);
                     }
                 }
+            }
+
+            foreach (KeyValuePair<Pawn, int> tp in totalPresence)
+            {
+                Needs_Paranoia need = tp.Key.needs.TryGetNeed<Needs_Paranoia>();
+                if (need != null)
+                    need.CurLevel -= 0.25f;
             }
         }
     }

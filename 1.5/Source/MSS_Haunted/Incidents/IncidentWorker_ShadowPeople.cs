@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MSS_Haunted.Jobs;
+using MSS_Haunted.Needs;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -29,5 +30,21 @@ public class IncidentWorker_ShadowPeople : IncidentWorker_EntitySwarm
         };
         parms1.points = Mathf.Max(parms1.points, MSS_HauntedDefOf.MSSFP_HauntedFaction.MinPointsToGeneratePawnGroup(parms1.groupKind) * 1.05f);
         return PawnGroupMakerUtility.GeneratePawns(parms1).ToList();
+    }
+
+    protected override bool TryExecuteWorker(IncidentParms parms)
+    {
+        bool ret = base.TryExecuteWorker(parms);
+        if (parms.target is Map map)
+        {
+            foreach (Pawn pawn in map.mapPawns.FreeColonistsSpawned)
+            {
+                Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+                if (need != null)
+                    need.CurLevel -= 0.4f;
+            }
+        }
+
+        return ret;
     }
 }

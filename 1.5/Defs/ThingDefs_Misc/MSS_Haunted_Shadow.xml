@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+
 <Defs>
-  <PawnRenderTreeDef>
-    <defName>MSS_Haunted_ShadowPerson</defName>
-    <root Class="PawnRenderNodeProperties_Parent">
-      <debugLabel>Root</debugLabel>
-      <tagDef>Root</tagDef>
-      <children>
-        <li>
-          <debugLabel>Body</debugLabel>
-          <tagDef>Body</tagDef>
-          <useRottenColor>true</useRottenColor>
-          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
-          <children>
-          </children>
-        </li>
-      </children>
-    </root>
-  </PawnRenderTreeDef>
+    <PawnRenderTreeDef>
+        <defName>MSS_Haunted_ShadowPerson</defName>
+        <root Class="PawnRenderNodeProperties_Parent">
+            <debugLabel>Root</debugLabel>
+            <tagDef>Root</tagDef>
+            <children>
+                <li>
+                    <debugLabel>Body</debugLabel>
+                    <tagDef>Body</tagDef>
+                    <useRottenColor>true</useRottenColor>
+                    <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+                    <children>
+                    </children>
+                </li>
+            </children>
+        </root>
+    </PawnRenderTreeDef>
 
     <ThingDef ParentName="BasePawn">
         <defName>MSS_Haunted_ShadowPerson</defName>
@@ -110,9 +111,7 @@
                 <bodyGraphicData>
                     <texPath>MSS_Haunted_ShadowPerson</texPath>
                     <graphicClass>Graphic_Random</graphicClass>
-                    <shadowData>
-                        <volume>(0, 0, 0)</volume>
-                    </shadowData>
+                    <shaderType>TransparentPostLight</shaderType>
                     <drawSize>(2,2)</drawSize>
                 </bodyGraphicData>
             </li>

@@ -75,8 +75,8 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
 
             if (Rand.Chance(0.1f))
             {
-                Pawn p = jobRitual.assignments.Participants.Where(p => p != accused && p != judge).RandomElementWithFallback();
-                if (p != null)
+                Pawn? pawn = jobRitual.assignments.Participants.Where(p => p != accused && p != judge).RandomElementWithFallback();
+                if (pawn != null)
                 {
                     if (!accused.health.hediffSet.TryGetHediff(MSS_HauntedDefOf.MSS_Haunted_PossessionHaunt, out Hediff hediff))
                     {

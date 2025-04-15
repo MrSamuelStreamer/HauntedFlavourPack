@@ -210,7 +210,7 @@
                 <positivityIndex>1</positivityIndex>
             </li>
             <li>
-                <label>a witch!</label>
+                <label>the judge is a witch!</label>
                 <chance>0.05</chance>
                 <description>{PAWN_labelShort} flipped the argument and convinced everyone that {PROSECUTOR_labelShort} is a witch. {PROSECUTOR_labelShort} was convicted and can now be punished.</description>
                 <positivityIndex>2</positivityIndex>

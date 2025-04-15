@@ -31,11 +31,11 @@
         </roleTags>
         <grantedAbilities>
             <li>CombatCommand</li>
-            <li>MSS_Haunted_WitchTrial</li>
+            <li>MSSFP_WitchTrial</li>
         </grantedAbilities>
-        <requiredMemes>
-            <li>Supremacist</li>
-        </requiredMemes>
+        <!-- <requiredMemes> -->
+        <!--     <li>Supremacist</li> -->
+        <!-- </requiredMemes> -->
         <displayOrderInImpact>2</displayOrderInImpact>
         <roleApparelRequirements>
             <li>

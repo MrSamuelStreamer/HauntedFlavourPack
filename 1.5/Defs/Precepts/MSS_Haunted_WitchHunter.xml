@@ -4,15 +4,16 @@
         <defName>MSS_Haunted_IdeoRole_WitchHunter_Namer</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_roleName->witch hunter</li>
+                <li>r_roleName->interrogator</li>
+                <li>r_roleName->anomaly hunter</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
 
     <PreceptDef ParentName="PreceptRoleMultiBase">
         <defName>MSS_Haunted_IdeoRole_WitchHunter</defName>
-        <label>witch hunter</label>
-        <description>A hunter of witches.</description>
+        <label>interrogator</label>
+        <description>One who searches for the anomalous, and interrogates those suspected.</description>
         <iconPath>UI/Roles/Leader</iconPath>
         <nameMaker>MSS_Haunted_IdeoRole_WitchHunter_Namer</nameMaker>
         <roleRequirements>

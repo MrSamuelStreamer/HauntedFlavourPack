@@ -3,8 +3,8 @@
 <Defs>
     <AbilityDef ParentName="SpeechBase">
         <defName>MSSFP_WitchTrial</defName>
-        <label>witch trial</label>
-        <description>Accuse someone of being a witch and initiate a trial where they will be either convicted or exonerated. If the target is convicted, they can be freely imprisoned, executed or banished without penalty. The chance of conviction depends on the social abilities of the accuser and accused.</description>
+        <label>interrogation</label>
+        <description>interrogate a target accused of being anomalous. They will be either convicted or exonerated. If the target is convicted, they can be freely imprisoned, executed or banished without penalty. The chance of conviction depends on the social abilities of the accuser and accused.</description>
         <groupDef>Leader</groupDef>
         <targetRequired>True</targetRequired>
         <iconPath>UI/Icons/Rituals/Trial</iconPath>
@@ -47,8 +47,8 @@
 
     <PreceptDef ParentName="SpeechPreceptBase" Name="MSSFPWitchTrialBase">
         <defName>MSS_Haunted_WitchTrial</defName>
-        <label>witch trial</label>
-        <description>An accusation is being made that someone is a witch. The initiator will accuse someone of being a witch and gather people for a trial. Spectators will listen as the accuser and accused argue back and forth, then decide if the accusation is true. If the accused is convicted, you can freely banish, arrest or execute them and nobody will mind. The chance of a conviction depends on the social abilites of the accused and accuser, and the number of spectators.</description>
+        <label>interrogation</label>
+        <description>An accusation is being made that someone is anomalous. The initiator will accuse someone of being anomalous and gather people for interrogation. Spectators will listen as the interrogator and accused argue back and forth, then decide if the accusation is true. If the accused is convicted, you can freely banish, arrest or execute them and nobody will mind. The chance of a conviction depends on the social abilites of the accused and interrogator, and the number of spectators.</description>
         <ritualPatternBase>MSS_Haunted_WitchTrial</ritualPatternBase>
         <ignoreNameUniqueness>true</ignoreNameUniqueness>
         <iconPath>UI/Icons/Rituals/Trial</iconPath>
@@ -75,7 +75,7 @@
         <durationTicks>5000</durationTicks>
         <roles>
             <li Class="RitualRoleTag">
-                <label>judge</label>
+                <label>interrogator</label>
                 <tag>WitchHunter</tag>
                 <id>leader</id>
                 <precept>MSS_Haunted_IdeoRole_WitchHunter</precept>
@@ -190,7 +190,7 @@
             </li>
             <li Class="RitualOutcomeComp_PawnStatScaled">
                 <label>{PAWN_labelShort}'s negotiation ability</label>
-                <labelAbstract>The judge's negotiation ability</labelAbstract>
+                <labelAbstract>The interrogator's negotiation ability</labelAbstract>
                 <statDef>NegotiationAbility</statDef>
                 <roleId>leader</roleId>
                 <scaledBy>0.2</scaledBy>
@@ -198,21 +198,21 @@
         </comps>
         <outcomeChances>
             <li>
-                <label>not a witch!</label>
+                <label>not anomalous!</label>
                 <chance>0.5</chance>
-                <description>{PROSECUTOR_labelShort}'s arguments failed to convince anyone. {PAWN_labelShort} has been deemed not a witch!</description>
+                <description>{PROSECUTOR_labelShort}'s arguments failed to convince anyone. {PAWN_labelShort} has been deemed not anomalous!</description>
                 <positivityIndex>-1</positivityIndex>
             </li>
             <li>
-                <label>a witch!</label>
+                <label>anomalous!</label>
                 <chance>0.45</chance>
-                <description>{PROSECUTOR_labelShort} convinced everyone that {PAWN_labelShort} is a witch. {PAWN_labelShort} was convicted and can now be punished.</description>
+                <description>{PROSECUTOR_labelShort} convinced everyone that {PAWN_labelShort} is anomalous. {PAWN_labelShort} was convicted and can now be punished.</description>
                 <positivityIndex>1</positivityIndex>
             </li>
             <li>
-                <label>the judge is a witch!</label>
+                <label>the interrogator is anomalous!</label>
                 <chance>0.05</chance>
-                <description>{PAWN_labelShort} flipped the argument and convinced everyone that {PROSECUTOR_labelShort} is a witch. {PROSECUTOR_labelShort} was convicted and can now be punished.</description>
+                <description>{PAWN_labelShort} flipped the argument and convinced everyone that {PROSECUTOR_labelShort} is anomalous. {PROSECUTOR_labelShort} was convicted and can now be punished.</description>
                 <positivityIndex>2</positivityIndex>
             </li>
         </outcomeChances>
@@ -243,7 +243,7 @@
             </li>
             <li Class="RitualOutcomeComp_PawnStatScaled">
                 <label>{PAWN_labelShort}'s negotiation ability</label>
-                <labelAbstract>The judge's negotiation ability</labelAbstract>
+                <labelAbstract>The interrogator's negotiation ability</labelAbstract>
                 <statDef>NegotiationAbility</statDef>
                 <roleId>leader</roleId>
                 <scaledBy>0.2</scaledBy>
@@ -263,7 +263,7 @@
         <durationTicks>5000</durationTicks>
         <roles>
             <li Class="RitualRoleTag">
-                <label>judge</label>
+                <label>interrogator</label>
                 <tag>WitchHunter</tag>
                 <id>leader</id>
                 <precept>MSS_Haunted_IdeoRole_WitchHunter</precept>
@@ -314,7 +314,7 @@
     <durationTicks>5000</durationTicks>
     <roles>
       <li Class="RitualRoleTag">
-        <label>judge</label>
+        <label>interrogator</label>
         <tag>WitchHunter</tag>
         <id>leader</id>
         <precept>MSS_Haunted_IdeoRole_WitchHunter</precept>

@@ -6,4 +6,13 @@
     <MSS_Haunted_LetterLabelGeneGiver>Mutation</MSS_Haunted_LetterLabelGeneGiver>
     <MSS_Haunted_LetterTextGeneGiver>{PAWN} has mutated, gaining: {1}.</MSS_Haunted_LetterTextGeneGiver>
     <MSS_Haunted_LetterTextGeneGiverFullXenotype>{PAWN} has mutated, becoming a {1}.</MSS_Haunted_LetterTextGeneGiverFullXenotype>
+
+    <MSS_Haunted_AccusedLetterLabel>{PAWN} has been accused!</MSS_Haunted_AccusedLetterLabel>
+    <MSS_Haunted_AccusedLetterText>{PAWN} has been accused of being a witch by {ACCUSER}!</MSS_Haunted_AccusedLetterText>
+
+    <MSS_Haunted_PoltergeistSmall_LetterLabel>Poltergeist!</MSS_Haunted_PoltergeistSmall_LetterLabel>
+    <MSS_Haunted_PoltergeistSmall_LetterText>A minor poltergeist incident is occuring, centered around {PAWN}!</MSS_Haunted_PoltergeistSmall_LetterText>
+
+    <MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterLabel>Poltergeist!</MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterLabel>
+    <MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterText>A major poltergeist incident is occuring, centered around {PAWN}!</MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterText>
 </LanguageData>

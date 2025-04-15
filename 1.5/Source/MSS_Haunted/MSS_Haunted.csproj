@@ -9,7 +9,7 @@
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
-        <Nullable>enable</Nullable>
+        <Nullable>annotations</Nullable>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <Optimize>false</Optimize>

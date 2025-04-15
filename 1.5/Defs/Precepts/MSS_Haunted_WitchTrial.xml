@@ -76,7 +76,7 @@
         <roles>
             <li Class="RitualRoleTag">
                 <label>judge</label>
-                <tag>Leader</tag>
+                <tag>WitchHunter</tag>
                 <id>leader</id>
                 <precept>MSS_Haunted_IdeoRole_WitchHunter</precept>
                 <required>True</required>
@@ -190,7 +190,7 @@
             </li>
             <li Class="RitualOutcomeComp_PawnStatScaled">
                 <label>{PAWN_labelShort}'s negotiation ability</label>
-                <labelAbstract>Leader's negotiation ability</labelAbstract>
+                <labelAbstract>The judge's negotiation ability</labelAbstract>
                 <statDef>NegotiationAbility</statDef>
                 <roleId>leader</roleId>
                 <scaledBy>0.2</scaledBy>
@@ -243,7 +243,7 @@
             </li>
             <li Class="RitualOutcomeComp_PawnStatScaled">
                 <label>{PAWN_labelShort}'s negotiation ability</label>
-                <labelAbstract>Leader's negotiation ability</labelAbstract>
+                <labelAbstract>The judge's negotiation ability</labelAbstract>
                 <statDef>NegotiationAbility</statDef>
                 <roleId>leader</roleId>
                 <scaledBy>0.2</scaledBy>
@@ -264,7 +264,7 @@
         <roles>
             <li Class="RitualRoleTag">
                 <label>judge</label>
-                <tag>Leader</tag>
+                <tag>WitchHunter</tag>
                 <id>leader</id>
                 <precept>MSS_Haunted_IdeoRole_WitchHunter</precept>
                 <required>True</required>
@@ -315,7 +315,7 @@
     <roles>
       <li Class="RitualRoleTag">
         <label>judge</label>
-        <tag>Leader</tag>
+        <tag>WitchHunter</tag>
         <id>leader</id>
         <precept>MSS_Haunted_IdeoRole_WitchHunter</precept>
         <required>True</required>

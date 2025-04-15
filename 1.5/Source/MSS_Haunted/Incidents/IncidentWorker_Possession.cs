@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using MSS_Haunted.Needs;
+using RimWorld;
 using Verse;
 
 namespace MSS_Haunted.Incidents;
@@ -20,6 +21,15 @@ public class IncidentWorker_Possession : IncidentWorker
             return false;
 
         targetPawn.health.AddHediff(MSS_HauntedDefOf.MSS_Haunted_PossessionHaunt);
+
+        foreach (Pawn pawn in target.mapPawns.FreeColonistsSpawned)
+        {
+            Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+            if (need != null)
+                need.CurLevel -= 0.2f;
+        }
+
+        SendStandardLetter(parms, null);
 
         return true;
     }

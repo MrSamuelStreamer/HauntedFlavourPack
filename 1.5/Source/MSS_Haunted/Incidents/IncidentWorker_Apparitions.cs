@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MSS_Haunted.Needs;
 using RimWorld;
 using Verse;
 
@@ -19,12 +20,19 @@ public class IncidentWorker_Apparitions : IncidentWorker
     {
         Map target = (Map)parms.target;
 
-        // add apparition hidden hediff to all target.mapPawns.FreeColonistsAndPrisonersSpawned
-
         foreach (Pawn pawn in target.mapPawns.FreeColonistsAndPrisonersSpawned)
         {
             pawn.health?.AddHediff(MSS_HauntedDefOf.MSS_Haunted_ApparitionHaunt);
         }
+
+        foreach (Pawn pawn in target.mapPawns.FreeColonistsSpawned)
+        {
+            Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+            if (need != null)
+                need.CurLevel -= 0.2f;
+        }
+
+        SendStandardLetter(parms, null);
 
         return true;
     }

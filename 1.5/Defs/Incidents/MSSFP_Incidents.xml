@@ -15,6 +15,9 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
+        <letterLabel>Possession!</letterLabel>
+        <letterText>A colonist has become possessed!</letterText>
+        <letterDef>ThreatSmall</letterDef>
         <workerClass>MSS_Haunted.Incidents.IncidentWorker_Possession</workerClass>
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>
@@ -30,6 +33,9 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
+        <letterLabel>MSS_Haunted_PoltergeistSmall_LetterLabel</letterLabel>
+        <letterText>MSS_Haunted_PoltergeistSmall_LetterText</letterText>
+        <letterDef>ThreatSmall</letterDef>
         <workerClass>MSS_Haunted.Incidents.IncidentWorker_Poltergeist</workerClass>
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>
@@ -41,6 +47,9 @@
         <category>MSS_Haunted</category>
         <minRefireDays>30</minRefireDays>
         <baseChance>1</baseChance>
+        <letterLabel>MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterLabel</letterLabel>
+        <letterText>MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterText</letterText>
+        <letterDef>ThreatBig</letterDef>
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
@@ -58,6 +67,9 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
+        <letterLabel>Apparitions!</letterLabel>
+        <letterText>Apparitions are appearing around the colonists!</letterText>
+        <letterDef>ThreatSmall</letterDef>
         <workerClass>MSS_Haunted.Incidents.IncidentWorker_Apparitions</workerClass>
         <requireColonistsPresent>true</requireColonistsPresent>
         <pointsScaleable>true</pointsScaleable>

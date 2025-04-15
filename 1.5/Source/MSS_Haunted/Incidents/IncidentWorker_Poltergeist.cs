@@ -40,14 +40,23 @@ public class IncidentWorker_Poltergeist : IncidentWorker
         float hauntChance = IsSmall ? 0.35f : 0.65f;
         int minItems = IsSmall ? 5 : 20;
 
-        target.GetComponent<HauntAnimationController>().StartHaunting(potentialTargets.RandomElementWithFallback(targetPawn), radius, hauntChance, minItems);
+        float paranoiaOffset = IsSmall ? 0.2f : 0.4f;
+
+        Pawn chosenTarget = potentialTargets.RandomElementWithFallback(targetPawn);
+
+        target.GetComponent<HauntAnimationController>().StartHaunting(chosenTarget, radius, hauntChance, minItems);
 
         foreach (Pawn pawn in target.mapPawns.FreeColonistsSpawned)
         {
             Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
             if (need != null)
-                need.CurLevel -= 0.2f;
+                need.CurLevel -= paranoiaOffset;
         }
+
+        TaggedString label = def.letterLabel.Translate(chosenTarget.Named("PAWN")).CapitalizeFirst();
+        TaggedString text = def.letterText.Translate(chosenTarget.Named("PAWN")).CapitalizeFirst();
+
+        SendStandardLetter(label, text, def.letterDef, parms, (LookTargets)chosenTarget);
 
         return true;
     }

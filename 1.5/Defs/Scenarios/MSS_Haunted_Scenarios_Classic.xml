@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ScenarioDef>
+    <defName>MSS_Haunted_Exiles</defName>
+    <label>The Exiles</label>
+    <description>On a strange and terrifying world of cosmic horror where even the sanest of minds fall to pieces, an elite class of rulers willingly became Sanguophages, ensuring eternal stability for the governors of the world.
+
+      Only a small few would choose a life of cosmic horror over a life of servitude at the blood clinics; several brave wanderers ventured outside of the shieldwall into the wilderness of the world, hoping that their minds were stronger than their bodies.
+      
+      The Sanguophage will remain ambivalent to your shelter, believing that the horrors beyond the wall will crush any rebellion for them, but with a large enough colony you might find their attention drawn to you.
+      
+      Note: This is a hard scenario. You will rarely face raiders except for occasional desperate survivors and feral mutant sanguophage that have been discarded outside the cities, however there will be a constant threat of horror, insanity, and strange events that will need constant monitoring and care.</description>
+    <scenario>
+      <summary>A group of humans build a shelter to survive against their vampiric oppressors and survive the terrifying world at large.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnChoiceCount>2</pawnChoiceCount>
+          <pawnCount>2</pawnCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+        <li Class="ScenPart_ForcedHediff">
+          <def>ForcedHediff</def>
+          <chance>0.2</chance>
+          <context>PlayerStarter</context>
+          <hediff>Malnutrition</hediff>
+          <severityRange>0.200000003~0.302703649</severityRange>
+        </li>
+        <li Class="ScenPart_SetNeedLevel">
+          <def>SetNeedLevel</def>
+          <chance>1</chance>
+          <context>PlayerStarter</context>
+          <need>Food</need>
+          <levelRange>0~0.146090582</levelRange>
+        </li>
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>200</count>
+          <allowRoofed>True</allowRoofed>
+        </li>
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <def>StartingThing_Defined</def>
+          <thingDef>WoodLog</thingDef>
+          <count>250</count>
+          <allowRoofed>True</allowRoofed>
+        </li>
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>10</count>
+          <allowRoofed>True</allowRoofed>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>On a strange and terrifying world of cosmic horror where even the sanest of minds fall to pieces, an elite class of rulers willingly became Sanguophages, ensuring eternal stability for the governors of the world.
+  
+  Only a small few would choose a life of cosmic horror over a life of servitude at the blood clinics; several brave wanderers ventured outside of the shieldwall into the wilderness of the world, hoping that their minds were stronger than their bodies.
+  
+  The sanguophage will remain ambivalent to your shelter, believing that the horrors beyond the wall will crush any rebellion for them, but with a large enough colony you might find their attention drawn to you.
+  </text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>		
+			<li Class = "PatchOperationRemove">
+				<xpath>/Defs/FactionDef[defName="pphhyy_BoneReapers_Faction"]/permanentEnemyToEveryoneExcept</xpath>
+			</li>		
+			<li Class = "PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="pphhyy_BoneReapers_Faction"]</xpath>
+				<value>
+					<naturalEnemy>true</naturalEnemy>
+    			</value>
+			</li>
+			<li Class = "PatchOperationReplace">
+				<xpath>/Defs/FactionDef[defName="pphhyy_BoneReapers_Faction"]/description/text()</xpath>
+				<value>Through the unfortunate combination of the unusually high birth and death rates due to Sanguophage human breeding programs, and a freak psychic phenomenon impacting the still-psy sensitive human remains found in large deposits throughout the world, the dead walk again.
+
+					Though their memories are fleeting, their abilities are not. Over the generations since their original awakening, they have figured out how to harness their abilities to not only raise more undead for their armies, but have created a unique and terrifying culture of their own, with powerful weaponry and unique fighting styles not restricted by the limits of the flesh.
+					
+					They seek vengeance on their unknowing Sanguophage creators, and seek to free the Profane Army of their Eldritch curse, but are otherwise fairly ambivalent to Humankind.</value>
+			</li>			
+		</operations>
+	</Operation>
+</Patch>

@@ -4,5 +4,6 @@
 		<li>Common</li>
 		<li>1.5</li>
         <li IfModActive="MrHydralisk.AnomaliesExpected">Compatibility/MrHydralisk.AnomaliesExpected/1.5</li>
+		<li IfModActive="pphhyy.bonereapers">Compatibility/pphhyy.bonereapers/1.5</li>
 	</v1.5>
 </loadFolders>

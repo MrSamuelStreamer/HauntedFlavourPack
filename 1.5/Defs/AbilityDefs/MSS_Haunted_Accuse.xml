@@ -3,9 +3,9 @@
     <AbilityDef ParentName="AbilityTouchBase">
         <defName>MSS_Haunted_Accuse</defName>
         <label>accuse!</label>
-        <description>Accuse someone of being a witch. This will calm the paranoia levels of the accuser.</description>
+        <description>Accuse someone of being a witch. This will calm the sanity levels of the accuser.</description>
         <targetRequired>True</targetRequired>
-        <iconPath>UI/Icons/Rituals/Trial</iconPath>
+        <iconPath>MSS_Haunted_Marked_south</iconPath>
         <gizmoClass>Command_Ability</gizmoClass>
         <uiOrder>1</uiOrder>
         <cooldownTicksRange>60000~120000</cooldownTicksRange> <!-- 1 to 2 days -->
@@ -46,7 +46,17 @@
                 <skillGains>
                     <Social>-3</Social>
                 </skillGains>
+                <socialFightChanceFactor>4</socialFightChanceFactor>
             </li>
         </degreeDatas>
     </TraitDef>
+
+    <TattooDef>
+        <defName>MSS_AccusedMark</defName>
+        <label>accused</label>
+        <texPath>MSS_Haunted_Marked</texPath>
+        <tattooType>Face</tattooType>
+        <category>Misc</category>
+        <visibleNorth>false</visibleNorth>
+    </TattooDef>
 </Defs>

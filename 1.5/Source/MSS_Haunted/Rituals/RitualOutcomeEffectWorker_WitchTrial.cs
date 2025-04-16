@@ -2,6 +2,7 @@
 using System.Linq;
 using MSS_Haunted.Needs;
 using RimWorld;
+using VAEInsanity;
 using Verse;
 
 namespace MSS_Haunted.Rituals;
@@ -58,7 +59,7 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
 
             foreach (KeyValuePair<Pawn, int> tp in totalPresence)
             {
-                Needs_Paranoia need = tp.Key.needs.TryGetNeed<Needs_Paranoia>();
+                Need_Sanity need = tp.Key.needs.TryGetNeed<Need_Sanity>();
                 if (need != null)
                     need.CurLevel += 0.85f;
             }
@@ -87,7 +88,7 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
 
             foreach (KeyValuePair<Pawn, int> tp in totalPresence)
             {
-                Needs_Paranoia need = tp.Key.needs.TryGetNeed<Needs_Paranoia>();
+                Need_Sanity need = tp.Key.needs.TryGetNeed<Need_Sanity>();
                 if (need != null)
                     need.CurLevel -= 0.25f;
             }

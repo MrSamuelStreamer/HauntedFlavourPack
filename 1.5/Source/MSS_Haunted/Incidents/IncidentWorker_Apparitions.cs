@@ -2,6 +2,7 @@
 using System.Linq;
 using MSS_Haunted.Needs;
 using RimWorld;
+using VAEInsanity;
 using Verse;
 
 namespace MSS_Haunted.Incidents;
@@ -27,7 +28,7 @@ public class IncidentWorker_Apparitions : IncidentWorker
 
         foreach (Pawn pawn in target.mapPawns.FreeColonistsSpawned)
         {
-            Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+            Need need = pawn.needs.TryGetNeed<Need_Sanity>();
             if (need != null)
                 need.CurLevel -= 0.2f;
         }

@@ -4,6 +4,7 @@ using MSS_Haunted.Jobs;
 using MSS_Haunted.Needs;
 using RimWorld;
 using UnityEngine;
+using VAEInsanity;
 using Verse;
 using Verse.AI.Group;
 
@@ -39,7 +40,7 @@ public class IncidentWorker_ShadowPeople : IncidentWorker_EntitySwarm
         {
             foreach (Pawn pawn in map.mapPawns.FreeColonistsSpawned)
             {
-                Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+                Need need = pawn.needs.TryGetNeed<Need_Sanity>();
                 if (need != null)
                     need.CurLevel -= 0.4f;
             }

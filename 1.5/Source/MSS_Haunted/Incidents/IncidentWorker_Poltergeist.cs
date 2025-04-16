@@ -2,6 +2,7 @@
 using System.Linq;
 using MSS_Haunted.Needs;
 using RimWorld;
+using VAEInsanity;
 using Verse;
 
 namespace MSS_Haunted.Incidents;
@@ -40,7 +41,7 @@ public class IncidentWorker_Poltergeist : IncidentWorker
         float hauntChance = IsSmall ? 0.35f : 0.65f;
         int minItems = IsSmall ? 5 : 20;
 
-        float paranoiaOffset = IsSmall ? 0.2f : 0.4f;
+        float sanityOffset = IsSmall ? 0.2f : 0.4f;
 
         Pawn chosenTarget = potentialTargets.RandomElementWithFallback(targetPawn);
 
@@ -48,9 +49,9 @@ public class IncidentWorker_Poltergeist : IncidentWorker
 
         foreach (Pawn pawn in target.mapPawns.FreeColonistsSpawned)
         {
-            Need need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+            Need need = pawn.needs.TryGetNeed<Need_Sanity>();
             if (need != null)
-                need.CurLevel -= paranoiaOffset;
+                need.CurLevel -= sanityOffset;
         }
 
         TaggedString label = def.letterLabel.Translate(chosenTarget.Named("PAWN")).CapitalizeFirst();

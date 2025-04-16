@@ -7,7 +7,7 @@
         <description>interrogate a target accused of being anomalous. They will be either convicted or exonerated. If the target is convicted, they can be freely imprisoned, executed or banished without penalty. The chance of conviction depends on the social abilities of the accuser and accused.</description>
         <groupDef>Leader</groupDef>
         <targetRequired>True</targetRequired>
-        <iconPath>UI/Icons/Rituals/Trial</iconPath>
+        <iconPath>MSS_Haunted_Marked</iconPath>
         <gizmoClass>Command_AbilityTrial</gizmoClass>
         <uiOrder>1</uiOrder>
         <cooldownTicksRange>60000~120000</cooldownTicksRange> <!-- 1 to 2 days -->
@@ -179,8 +179,8 @@
                     </points>
                 </curve>
             </li>
-            <li Class="MSS_Haunted.Rituals.RitualOutcomeComp_ParticipantParanoia">
-                <label>average paranoia</label>
+            <li Class="MSS_Haunted.Rituals.RitualOutcomeComp_ParticipantSanity">
+                <label>average sanity</label>
                 <curve>
                     <points>
                         <li>(0,  0.5)</li>
@@ -232,8 +232,8 @@
                     </points>
                 </curve>
             </li>
-            <li Class="MSS_Haunted.Rituals.RitualOutcomeComp_ParticipantParanoia">
-                <label>average paranoia</label>
+            <li Class="MSS_Haunted.Rituals.RitualOutcomeComp_ParticipantSanity">
+                <label>average sanity</label>
                 <curve>
                     <points>
                         <li>(0,  0.5)</li>

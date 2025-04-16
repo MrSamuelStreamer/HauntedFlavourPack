@@ -9,7 +9,7 @@
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
-        <Nullable>annotations</Nullable>
+        <Nullable>disable</Nullable>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <Optimize>false</Optimize>
@@ -39,6 +39,13 @@
             <HintPath Condition="Exists('../../../../3379574408/1.5/Assemblies/MSSFP.dll')">../../../../3379574408/1.5/Assemblies/MSSFP.dll</HintPath>
             <HintPath Condition="Exists('../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll')">../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll</HintPath>
             <HintPath Condition="Exists('../../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll')">../../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="VAEInsanity">
+            <HintPath Condition="Exists('../../../../VanillaAnomalyExpanded-Insanity/1.5/Assemblies/VAEInsanity.dll')">../../../../VanillaAnomalyExpanded-Insanity/1.5/Assemblies/VAEInsanity.dll</HintPath>
+            <HintPath Condition="Exists('../../../../3342412435/1.5/Assemblies/VAEInsanity.dll')">../../../../3342412435/1.5/Assemblies/VAEInsanity.dll</HintPath>
+            <HintPath Condition="Exists('../../../../../../../workshop/content/294100/3342412435/1.5/Assemblies/VAEInsanity.dll')">../../../../../../../workshop/content/294100/3342412435/1.5/Assemblies/VAEInsanity.dll</HintPath>
+            <HintPath Condition="Exists('../../../../../../../../workshop/content/294100/3342412435/1.5/Assemblies/VAEInsanity.dll')">../../../../../../../../workshop/content/294100/3342412435/1.5/Assemblies/VAEInsanity.dll</HintPath>
             <Private>False</Private>
         </Reference>
     </ItemGroup>
@@ -98,12 +105,6 @@
         <CommonFiles Update="..\..\..\Common\Languages\English\DefInjected\MrKociak.CyberpsychosisMod.xml">
           <Link>HauntedFlavourPack\Common\Languages\English\DefInjected\MrKociak.CyberpsychosisMod.xml</Link>
         </CommonFiles>
-        <ReleaseFiles Update="..\..\Patches\MSS_Haunted_Mutations.xml">
-          <Link>HauntedFlavourPack\1.5\Patches\MSS_Haunted_Mutations.xml</Link>
-        </ReleaseFiles>
-        <ReleaseFiles Update="..\..\Defs\Needs\MSS_Haunted_MutationalStability.xml">
-          <Link>HauntedFlavourPack\1.5\Defs\Needs\MSS_Haunted_MutationalStability.xml</Link>
-        </ReleaseFiles>
         <ReleaseFiles Update="..\..\Defs\Stats\MSS_Haunted_MysticalSensitivity.xml">
           <Link>HauntedFlavourPack\1.5\Defs\Stats\MSS_Haunted_MutationalStability.xml</Link>
         </ReleaseFiles>

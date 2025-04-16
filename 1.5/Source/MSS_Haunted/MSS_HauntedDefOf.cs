@@ -16,11 +16,6 @@ public static class MSS_HauntedDefOf
     public static readonly ThingDef MSS_Haunted_HauntedThingTargetFlyer;
     public static readonly WeatherDef MSS_Haunted_Thunderstorm;
 
-    public static readonly NeedDef MSS_Haunted_Paranoia;
-    public static readonly StatDef MSS_Haunted_Paranoia_RecoverySpeed;
-
-    public static readonly StatDef MSS_Haunted_MysticalSensitivity;
-
     public static readonly IncidentCategoryDef MSS_Haunted;
 
     public static readonly IncidentDef MSS_Haunted_PoltergeistSmall;
@@ -35,6 +30,8 @@ public static class MSS_HauntedDefOf
     public static readonly TraitDef MSS_Haunted_Accused;
 
     public static readonly AbilityDef MSS_Haunted_Accuse;
+
+    public static readonly TattooDef MSS_AccusedMark;
 
     static MSS_HauntedDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MSS_HauntedDefOf));
 }

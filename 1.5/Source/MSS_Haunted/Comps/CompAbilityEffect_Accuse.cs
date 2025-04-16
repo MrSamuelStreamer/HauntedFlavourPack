@@ -1,5 +1,6 @@
 ﻿using MSS_Haunted.Needs;
 using RimWorld;
+using VAEInsanity;
 using Verse;
 
 namespace MSS_Haunted.Comps;
@@ -15,6 +16,8 @@ public class CompAbilityEffect_Accuse : CompAbilityEffect
 
         pawn.story.traits.GainTrait(new Trait(MSS_HauntedDefOf.MSS_Haunted_Accused));
 
+        pawn.style.FaceTattoo = MSS_HauntedDefOf.MSS_AccusedMark;
+
         LetterMaker.MakeLetter(
             "MSS_Haunted_AccusedLetterLabel".Translate(pawn.Named("PAWN")),
             "MSS_Haunted_AccusedLetterText".Translate(pawn.Named("PAWN"), parent.pawn.Named("ACCUSER")),
@@ -22,11 +25,11 @@ public class CompAbilityEffect_Accuse : CompAbilityEffect
             new LookTargets(pawn)
         );
 
-        Need need = parent.pawn.needs.TryGetNeed<Needs_Paranoia>();
+        Need need = parent.pawn.needs.TryGetNeed<Need_Sanity>();
         if (need != null)
             need.CurLevel += 0.25f;
 
-        need = pawn.needs.TryGetNeed<Needs_Paranoia>();
+        need = pawn.needs.TryGetNeed<Need_Sanity>();
         if (need != null)
             need.CurLevel -= 0.25f;
     }

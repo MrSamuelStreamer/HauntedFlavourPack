@@ -43,8 +43,8 @@
                 <onlyRenderWhenDrafted>false</onlyRenderWhenDrafted>
             </li>
             <li Class="MSS_Haunted.Hediffs.HediffCompProperties_TimeTracker"/>
-            <li Class="MSS_Haunted.Hediffs.HediffCompProperties_ParanoiaTicker">
-                <paranoiaTickInterval>600</paranoiaTickInterval>
+            <li Class="MSS_Haunted.Hediffs.HediffCompProperties_SanityTicker">
+                <sanityTickInterval>600</sanityTickInterval>
                 <dropPerInterval>0.01~0.05</dropPerInterval>
             </li>
         </comps>
@@ -86,8 +86,8 @@
             </li>
         </stages>
         <comps>
-            <li Class="MSS_Haunted.Hediffs.HediffCompProperties_ParanoiaTicker">
-                <paranoiaTickInterval>600</paranoiaTickInterval>
+            <li Class="MSS_Haunted.Hediffs.HediffCompProperties_SanityTicker">
+                <sanityTickInterval>600</sanityTickInterval>
                 <dropPerInterval>0.001~0.005</dropPerInterval>
             </li>
             <li Class="HediffCompProperties_SeverityPerDay">

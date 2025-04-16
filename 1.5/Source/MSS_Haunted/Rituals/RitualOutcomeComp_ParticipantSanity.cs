@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using MSS_Haunted.Needs;
 using RimWorld;
+using VAEInsanity;
 using Verse;
 
 namespace MSS_Haunted.Rituals;
 
-public class RitualOutcomeComp_ParticipantParanoia : RitualOutcomeComp_Quality
+public class RitualOutcomeComp_ParticipantSanity : RitualOutcomeComp_Quality
 {
     public override RitualOutcomeComp_Data MakeData()
     {
@@ -17,23 +18,23 @@ public class RitualOutcomeComp_ParticipantParanoia : RitualOutcomeComp_Quality
     {
         RitualOutcomeComp_DataThingPresence dataThingPresence = (RitualOutcomeComp_DataThingPresence)data;
 
-        float totalParanoia = 0;
-        int paranoiaHavers = 0;
+        float totalSanity = 0;
+        int sanityHavers = 0;
 
         foreach (KeyValuePair<Thing, float> presentForTick in dataThingPresence.presentForTicks)
         {
             Pawn key = (Pawn)presentForTick.Key;
-            Needs_Paranoia paranoia = key.needs.TryGetNeed<Needs_Paranoia>();
+            Need_Sanity sanity = key.needs.TryGetNeed<Need_Sanity>();
 
-            if (paranoia == null)
+            if (sanity == null)
                 continue;
 
-            paranoiaHavers++;
-            totalParanoia += paranoia.CurLevel;
+            sanityHavers++;
+            totalSanity += sanity.CurLevel;
         }
 
-        float avgParanoia = paranoiaHavers > 0 ? totalParanoia / paranoiaHavers : 0;
+        float avgSanity = sanityHavers > 0 ? totalSanity / sanityHavers : 0;
 
-        return curve != null ? (int)Math.Min(avgParanoia, curve.Points[curve.PointsCount - 1].x) : avgParanoia;
+        return curve != null ? (int)Math.Min(avgSanity, curve.Points[curve.PointsCount - 1].x) : avgSanity;
     }
 }

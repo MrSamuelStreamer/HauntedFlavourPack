@@ -51,9 +51,15 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
         if (extraLetterText != null)
             text += "\n\n" + extraLetterText;
 
+        if (judge.style.FaceTattoo == MSS_HauntedDefOf.MSS_AccusedMark)
+        {
+            judge.style.FaceTattoo = null;
+            judge.style.Notify_StyleItemChanged();
+        }
+
         if (outcome.Positive)
         {
-            accused.guilt.Notify_Guilty(900000);
+            accused.guilt.Notify_Guilty(GenDate.DaysPerYear);
             accused.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.TrialConvicted);
             Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter((TaggedString)label, text, LetterDefOf.RitualOutcomePositive, letterLookTargets));
 
@@ -63,6 +69,9 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
                 if (need != null)
                     need.CurLevel += 0.85f;
             }
+
+            accused.style.FaceTattoo = MSS_HauntedDefOf.MSS_AccusedMark;
+            accused.style.Notify_StyleItemChanged();
         }
         else
         {
@@ -70,13 +79,19 @@ public class RitualOutcomeEffectWorker_WitchTrial : RitualOutcomeEffectWorker_Fr
             judge.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.TrialFailed);
             accused.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.TrialExonerated);
 
+            if (accused.style.FaceTattoo == MSS_HauntedDefOf.MSS_AccusedMark)
+            {
+                accused.style.FaceTattoo = null;
+                accused.style.Notify_StyleItemChanged();
+            }
+
             Trait t = accused.story.traits.GetTrait(MSS_HauntedDefOf.MSS_Haunted_Accused);
             if (t != null)
                 accused.story.traits.RemoveTrait(t);
 
             if (Rand.Chance(0.1f))
             {
-                Pawn? pawn = jobRitual.assignments.Participants.Where(p => p != accused && p != judge).RandomElementWithFallback();
+                Pawn pawn = jobRitual.assignments.Participants.Where(p => p != accused && p != judge).RandomElementWithFallback();
                 if (pawn != null)
                 {
                     if (!accused.health.hediffSet.TryGetHediff(MSS_HauntedDefOf.MSS_Haunted_PossessionHaunt, out Hediff hediff))

@@ -17,6 +17,7 @@ public class CompAbilityEffect_Accuse : CompAbilityEffect
         pawn.story.traits.GainTrait(new Trait(MSS_HauntedDefOf.MSS_Haunted_Accused));
 
         pawn.style.FaceTattoo = MSS_HauntedDefOf.MSS_AccusedMark;
+        pawn.style.Notify_StyleItemChanged();
 
         LetterMaker.MakeLetter(
             "MSS_Haunted_AccusedLetterLabel".Translate(pawn.Named("PAWN")),

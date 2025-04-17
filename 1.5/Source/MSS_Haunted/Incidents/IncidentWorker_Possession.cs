@@ -1,4 +1,4 @@
-﻿using MSS_Haunted.Needs;
+﻿using System.Linq;
 using RimWorld;
 using VAEInsanity;
 using Verse;
@@ -9,14 +9,21 @@ public class IncidentWorker_Possession : IncidentWorker
 {
     protected override bool CanFireNowSub(IncidentParms parms)
     {
-        return base.CanFireNowSub(parms) && parms.target is Map;
+        return base.CanFireNowSub(parms) && parms.target is Map && GetTargetPawn(parms) != null;
+    }
+
+    public virtual Pawn GetTargetPawn(IncidentParms parms)
+    {
+        Map target = (Map)parms.target;
+
+        return target.mapPawns.FreeColonistsAndPrisonersSpawned.Where(p => !p.health.hediffSet.HasHediff(MSS_HauntedDefOf.MSS_Haunted_PossessionHaunt)).RandomElementWithFallback();
     }
 
     protected override bool TryExecuteWorker(IncidentParms parms)
     {
         Map target = (Map)parms.target;
 
-        Pawn targetPawn = target.mapPawns.FreeColonistsAndPrisonersSpawned.RandomElementWithFallback();
+        Pawn targetPawn = GetTargetPawn(parms);
 
         if (targetPawn == null)
             return false;

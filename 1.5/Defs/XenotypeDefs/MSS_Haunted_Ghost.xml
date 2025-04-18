@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <XenotypeDef>
+    <defName>MSS_Haunted_Ghost</defName>
+    <label>Ghost</label>
+    <description>Ghosts are the psychically resurrected spirits of the untimely deceased. This is an incredibly rare and random process, with approximately 1 in 100 chance of occuring to a pawn. Some ghosts are even able to develop special abilities and control their ghost form, evolving into a new xenotype with additional abilities.</description>
+    <descriptionShort>A ghost is the returned spirit of a person.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Custom/Genie_5</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li MayRequire="sarg.alphagenes">AG_Foodless</li>
+      <li>DiseaseFree</li>
+      <li>PerfectImmunity</li>
+      <li>TotalHealing</li>
+      <li MayRequire="sarg.alphagenes">AG_ColdImmunity</li>
+      <li MayRequire="sarg.alphagenes">AG_WaterBlood</li>
+      <li MayRequire="sarg.alphagenes">AG_PukeWater</li>
+      <li MayRequire="sarg.alphagenes">AG_Clean</li>
+      <li MayRequire="sarg.alphagenes">AG_NoLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_NoMeat</li>
+      <li MayRequire="sarg.alphagenes">AG_FrailBack</li>
+      <li>PsychicAbility_Deaf</li>
+      <li MayRequire="sarg.alphagenes">AG_WaterStriding</li>
+      <li MayRequire="sarg.alphagenes">AG_ColdRadiating</li>
+      <li MayRequire="botchjob.profaned">BotchJob_DaylightAversion</li>
+      <li>Neversleep</li>
+      <li MayRequire="botchjob.profaned">BotchJob_UndeadPainlessness</li>
+      <li>Sterile</li>
+      <li>Beauty_VeryUgly</li>
+      <li MayRequire="lts.geg">GEG_Eyes_GlowingCyan</li>
+      <li MayRequire="vanillaracesexpanded.fungoid">VRE_DeadVoice</li>
+      <li MayRequire="tests.tsg">TXeno_TransparentSkinGenes_Basic</li>
+      <li>AptitudeTerrible_Shooting</li>
+      <li>AptitudeTerrible_Melee</li>
+      <li>AptitudeTerrible_Construction</li>
+      <li>AptitudeTerrible_Mining</li>
+    </genes>
+  </XenotypeDef>
+</Defs>

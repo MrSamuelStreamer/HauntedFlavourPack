@@ -30,7 +30,7 @@ public static class DamageWorker_AddInjury_Patch
         {
             Messages.Message(
                 extension.message.Formatted(target.Named("TARGET"), pawn.Named("INSTIGATOR"), extension.hediff.LabelCap.Named("HEDIFF")),
-                new LookTargets([target]),
+                new LookTargets(target),
                 extension.messageType
             );
         }

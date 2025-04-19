@@ -15,4 +15,8 @@
 
     <MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterLabel>Poltergeist!</MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterLabel>
     <MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterText>A major poltergeist incident is occuring, centered around {PAWN}!</MSS_Haunted_MSS_Haunted_PoltergeistBig_LetterText>
+
+    <MSS_Haunted_GhostificationChance>Ghostification Chance {0}</MSS_Haunted_GhostificationChance>
+    <MSS_Haunted_GhostificationChanceDesc>Chance to resurrect as a ghost post mortem</MSS_Haunted_GhostificationChanceDesc>
+
 </LanguageData>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+
+    <PawnRelationDef>
+        <defName>MSS_Haunted_Killer</defName>
+        <label>killer</label>
+        <importance>145</importance>
+        <diedThought>MSS_Haunted_Killer_Died</diedThought>
+        <soldThoughts>
+            <li>MSS_Haunted_Killer_Sold</li>
+        </soldThoughts>
+        <killedThought>MSS_Haunted_Killer_Died</killedThought>
+        <opinionOffset>-100</opinionOffset>
+        <implied>false</implied>
+        <reflexive>false</reflexive>
+        <generationChanceFactor>0</generationChanceFactor>
+        <romanceChanceFactor>0</romanceChanceFactor>
+    </PawnRelationDef>
+
+    <ThoughtDef ParentName="DeathMemory">
+        <defName>MSS_Haunted_Killed</defName>
+        <durationDays>60</durationDays>
+        <stackLimit>1</stackLimit>
+        <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+        <stages>
+            <li>
+                <label>I died</label>
+                <description>What the hell, this is bullshit.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef ParentName="DeathMemory">
+        <defName>MSS_Haunted_Killer_Died</defName>
+        <durationDays>30</durationDays>
+        <stackLimit>1</stackLimit>
+        <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+        <stages>
+            <li>
+                <label>my killer {0} died</label>
+                <description>Serves them right. At least there's some justice in this world.</description>
+                <baseMoodEffect>30</baseMoodEffect>
+            </li>
+        </stages>
+        <replaceThoughts>
+            <li>MSS_Haunted_Killed</li>
+        </replaceThoughts>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>MSS_Haunted_Killer_Sold</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <durationDays>30</durationDays>
+        <stackLimit>1</stackLimit>
+        <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+        <stages>
+            <li>
+                <label>killer sold</label>
+                <labelSocial>sold my killer</labelSocial>
+                <description>My killer was sold to a trader hahahahaaa, I hope they suffer!</description>
+                <baseOpinionOffset>10</baseOpinionOffset>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

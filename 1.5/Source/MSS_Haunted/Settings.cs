@@ -6,14 +6,21 @@ namespace MSS_Haunted;
 public class Settings : ModSettings
 {
     //Use Mod.settings.setting to refer to this setting.
-    public bool setting = true;
+    public float ghostificationChance = 0.01f;
 
     public void DoWindowContents(Rect wrect)
     {
-        var options = new Listing_Standard();
+        Listing_Standard options = new();
         options.Begin(wrect);
 
-        options.CheckboxLabeled("MSS_Haunted_Settings_SettingName".Translate(), ref setting);
+        ghostificationChance = options.SliderLabeled(
+            "MSS_Haunted_GhostificationChance".Translate(ghostificationChance.ToStringPercent()),
+            ghostificationChance,
+            0f,
+            1f,
+            0.3f,
+            "MSS_Haunted_GhostificationChanceDesc".Translate()
+        );
         options.Gap();
 
         options.End();
@@ -21,6 +28,7 @@ public class Settings : ModSettings
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref setting, "setting", true);
+        Scribe_Values.Look(ref ghostificationChance, "ghostificationChance", 0.01f);
+        base.ExposeData();
     }
 }

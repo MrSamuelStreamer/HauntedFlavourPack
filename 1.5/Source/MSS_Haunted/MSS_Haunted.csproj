@@ -129,6 +129,9 @@
         <ReleaseFiles Update="..\..\Defs\AbilityDefs\MSS_Haunted_Accuse.xml">
           <Link>HauntedFlavourPack\1.5\Defs\AbilityDefs\MSS_Haunted_Accuse</Link>
         </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Defs\MSS_InfectionPathway.xml">
+          <Link>HauntedFlavourPack\1.5\Defs\MSS_InfectionPathway.xml</Link>
+        </ReleaseFiles>
     </ItemGroup>
     <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
         <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory="..\..\.."/>

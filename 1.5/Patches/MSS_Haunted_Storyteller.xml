@@ -45,4 +45,39 @@
             </li>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/IncidentDef[defName="MetalhorrorImplantation"]/baseChance</xpath>
+        <value>
+            <baseChance>1.5</baseChance>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/IncidentDef[defName="MetalhorrorImplantation"]/earliestDay</xpath>
+        <value>
+            <earliestDay>10</earliestDay>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/IncidentDef[defName="MetalhorrorImplantation"]/minRefireDays</xpath>
+        <value>
+            <minRefireDays>10</minRefireDays>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/IncidentDef[defName="MetalhorrorImplantation"]/minPopulation</xpath>
+        <value>
+            <minPopulation>3</minPopulation>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/HediffDef[defName="MetalhorrorImplant"]/possiblePathways</xpath>
+        <value>
+            <MSS_Haunted_AteWithoutTable>Implanted by contamination when eating without a table</MSS_Haunted_AteWithoutTable>
+        </value>
+    </Operation>
 </Patch>

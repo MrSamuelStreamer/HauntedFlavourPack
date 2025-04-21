@@ -21,7 +21,6 @@ public static class MSS_HauntedDefOf
     public static readonly IncidentDef MSS_Haunted_PoltergeistSmall;
     public static readonly HediffDef MSS_Haunted_ApparitionHaunt;
     public static readonly HediffDef MSS_Haunted_ShadowPersonInvisibility;
-    public static readonly HediffDef MSS_Haunted_UnfinishedBusiness;
 
     public static readonly DutyDef MSS_Haunted_ShadowPersonSwarm;
     public static readonly ThingDef MSS_Haunted_ShadowPerson;
@@ -33,6 +32,8 @@ public static class MSS_HauntedDefOf
     public static readonly AbilityDef MSS_Haunted_Accuse;
 
     public static readonly TattooDef MSS_AccusedMark;
+
+    public static readonly InfectionPathwayDef MSS_Haunted_AteWithoutTable;
 
     public static readonly PawnRelationDef MSS_Haunted_Killer;
     public static readonly ThoughtDef MSS_Haunted_Killed;

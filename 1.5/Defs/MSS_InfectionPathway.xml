@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <InfectionPathwayDef>
+        <defName>MSS_Haunted_AteWithoutTable</defName>
+        <label>ate without a table</label>
+    </InfectionPathwayDef>
+
+</Defs>

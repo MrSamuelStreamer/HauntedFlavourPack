@@ -38,5 +38,7 @@ public static class MSS_HauntedDefOf
     public static readonly PawnRelationDef MSS_Haunted_Killer;
     public static readonly ThoughtDef MSS_Haunted_Killed;
 
+    public static readonly HediffDef MSS_Haunted_UnfinishedBusiness;
+
     static MSS_HauntedDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MSS_HauntedDefOf));
 }

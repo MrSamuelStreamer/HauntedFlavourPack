@@ -37,5 +37,6 @@
         <li>Ludeon.RimWorld.Biotech</li>
         <li>Ludeon.RimWorld.Anomaly</li>
         <li>VanillaExpanded.VAnomalyEInsanity</li>
+        <li>vanillaexpanded.vcef</li>
     </loadAfter>
 </ModMetaData>

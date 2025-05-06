@@ -132,6 +132,9 @@
         <ReleaseFiles Update="..\..\Defs\MSS_InfectionPathway.xml">
           <Link>HauntedFlavourPack\1.5\Defs\MSS_InfectionPathway.xml</Link>
         </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Patches\MSSFP_Anomaly.xml">
+          <Link>HauntedFlavourPack\1.5\Patches\MSSFP_Anomaly.xml</Link>
+        </ReleaseFiles>
     </ItemGroup>
     <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
         <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory="..\..\.."/>

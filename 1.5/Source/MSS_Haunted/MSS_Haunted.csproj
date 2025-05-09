@@ -35,10 +35,10 @@
             <Private>False</Private>
         </Reference>
         <Reference Include="MSSFP">
-            <HintPath Condition="Exists('../../../../MrSamuelStreamerFlavourPack/1.5/Assemblies/MSSFP.dll')">../../../../MrSamuelStreamerFlavourPack/1.5/Assemblies/MSSFP.dll</HintPath>
             <HintPath Condition="Exists('../../../../3379574408/1.5/Assemblies/MSSFP.dll')">../../../../3379574408/1.5/Assemblies/MSSFP.dll</HintPath>
             <HintPath Condition="Exists('../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll')">../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll</HintPath>
             <HintPath Condition="Exists('../../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll')">../../../../../../../../workshop/content/294100/3379574408/1.5/Assemblies/MSSFP.dll</HintPath>
+            <HintPath Condition="Exists('../../../../MrSamuelStreamerFlavourPack/1.5/Assemblies/MSSFP.dll')">../../../../MrSamuelStreamerFlavourPack/1.5/Assemblies/MSSFP.dll</HintPath>
             <Private>False</Private>
         </Reference>
         <Reference Include="VAEInsanity">
@@ -131,6 +131,9 @@
         </ReleaseFiles>
         <ReleaseFiles Update="..\..\Defs\MSS_InfectionPathway.xml">
           <Link>HauntedFlavourPack\1.5\Defs\MSS_InfectionPathway.xml</Link>
+        </ReleaseFiles>
+        <ReleaseFiles Update="..\..\Patches\MSSFP_Anomaly.xml">
+          <Link>HauntedFlavourPack\1.5\Patches\MSSFP_Anomaly.xml</Link>
         </ReleaseFiles>
     </ItemGroup>
     <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">

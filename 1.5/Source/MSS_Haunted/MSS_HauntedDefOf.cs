@@ -40,5 +40,7 @@ public static class MSS_HauntedDefOf
 
     public static readonly HediffDef MSS_Haunted_UnfinishedBusiness;
 
+    public static readonly HediffDef MSS_MHAgony;
+
     static MSS_HauntedDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MSS_HauntedDefOf));
 }

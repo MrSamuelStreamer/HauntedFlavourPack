@@ -49,7 +49,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/IncidentDef[defName="MetalhorrorImplantation"]/baseChance</xpath>
         <value>
-            <baseChance>1.5</baseChance>
+            <baseChance>2</baseChance>
         </value>
     </Operation>
 

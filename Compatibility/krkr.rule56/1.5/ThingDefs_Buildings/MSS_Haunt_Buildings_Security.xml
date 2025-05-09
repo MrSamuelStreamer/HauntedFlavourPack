@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>MSS_Haunts_CCTV</defName>
+        <label>Shard Spectrograph</label>
+        <description>A dark archotech shard that, when combined with pneumatics and fueled with bioferrite, is able to detect movement from light and other subtle wavelength changes. Provides a decent sized vision. Due to the complex interaction of pneumatics and dark archo shards will leave behind nothing usable if destroyed.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Buildings/CCTV/mss_haunt_cctv</texPath>
+            <drawSize>(2,3.5)</drawSize>
+            <damageData>
+                <rect>(0.38,0.2,0.56375,0.8)</rect>
+                <cornerTL>Damage/Corner</cornerTL>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.15, 2.0, 0.4)</volume>
+            </shadowData>
+        </graphicData>
+        <category>Building</category>
+        <tickerType>Normal</tickerType>
+        <selectable>true</selectable>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <repairEffect>Repair</repairEffect>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>90</pathCost>
+        <hasInteractionCell>False</hasInteractionCell>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsSecurity</li>
+        </thingCategories>
+        <designationCategory>Intelligences</designationCategory>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <uiIconScale>1.2</uiIconScale>
+        <stealable>false</stealable>
+        <rotatable>false</rotatable>
+        <size>(1,1)</size>
+        <fillPercent>0.4</fillPercent>
+        <specialDisplayRadius>11</specialDisplayRadius>
+        <researchPrerequisites>
+            <li>TribalCCTV</li>
+            <li>BioferriteShaping</li>
+        </researchPrerequisites>
+        <costList>
+            <Shard>1</Shard>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <Bioferrite>80</Bioferrite>
+            <Steel>100</Steel>
+        </costList>
+        <statBases>
+            <MaxHitPoints>35</MaxHitPoints>
+            <Flammability>0.8</Flammability>
+            <WorkToBuild>600</WorkToBuild>
+            <Mass>20</Mass>
+            <Beauty>-5</Beauty>
+        </statBases>
+        <placeWorkers>
+            <li>PlaceWorker_NotUnderRoof</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <comps>
+            <li Class="CombatAI.Comps.CompProperties_Sighter">
+                <radius>12</radius>
+                <radiusNight>8</radiusNight>
+                <powered>false</powered>
+                <mannable>false</mannable>
+            </li>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>2</fuelConsumptionRate>
+                <fuelCapacity>10</fuelCapacity>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </fuelFilter>
+                <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+                <autoRefuelPercent>0.1</autoRefuelPercent>
+                <showFuelGizmo>true</showFuelGizmo>
+                <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+                <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+                <fuelGizmoLabel>Bioferrite</fuelGizmoLabel>
+                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

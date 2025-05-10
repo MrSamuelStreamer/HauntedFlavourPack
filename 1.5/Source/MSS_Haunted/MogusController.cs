@@ -16,13 +16,7 @@ public class MogusController(Map map) : MapComponent(map)
         {
             if (_ValidPawnKindDef.NullOrEmpty())
             {
-                _ValidPawnKindDef =
-                [
-                    MSSFPDefOf.MSSFP_MogusKind_Blue,
-                    MSSFPDefOf.MSSFP_MogusKind_Red,
-                    MSSFPDefOf.MSSFP_MogusKind_Green,
-                    // MSSFPDefOf.MSSFP_MogusKind_Yellow
-                ];
+                _ValidPawnKindDef = [MSSFPDefOf.MSSFP_MogusKind_Blue, MSSFPDefOf.MSSFP_MogusKind_Red, MSSFPDefOf.MSSFP_MogusKind_Green, MSSFPDefOf.MSSFP_MogusKind_Yellow];
             }
             return _ValidPawnKindDef;
             ;
@@ -33,7 +27,7 @@ public class MogusController(Map map) : MapComponent(map)
     {
         if (!map.IsPlayerHome)
             return;
-        if (!map.IsHashIntervalTick(GenDate.TicksPerDay / 24))
+        if (!map.IsHashIntervalTick(GenDate.TicksPerDay))
         {
             return;
         }

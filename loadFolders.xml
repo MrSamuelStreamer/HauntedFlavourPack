@@ -9,5 +9,6 @@
 		<li IfModActive="Ludeon.RimWorld.Biotech">Compatibility/Ludeon.RimWorld.Biotech/1.5</li>
 		<li IfModActive="vanillaexpanded.vcef">Compatibility/vanillaexpanded.vcef/1.5</li>
 		<li IfModActive="krkr.rule56">Compatibility/krkr.rule56/1.5</li>
+		<li IfModActive="vanillaquestsexpanded.cryptoforge">Compatibility/vanillaquestsexpanded.cryptoforge/1.5</li>
 	</v1.5>
 </loadFolders>

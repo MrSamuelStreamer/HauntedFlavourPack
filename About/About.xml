@@ -28,7 +28,7 @@
             <downloadUrl>https://github.com/Vanilla-Expanded/VanillaAnomalyExpanded-Insanity</downloadUrl>
         </li>
     </modDependencies>
-
+    
     <loadAfter>
         <li>brrainz.harmony</li>
         <li>Ludeon.RimWorld</li>
@@ -39,5 +39,7 @@
         <li>VanillaExpanded.VAnomalyEInsanity</li>
         <li>vanillaexpanded.vcef</li>
         <li>krkr.rule56</li>
+        <li>vanillaquestsexpanded.cryptoforge</li>
+        <li>lts.bvt</li>
     </loadAfter>
 </ModMetaData>

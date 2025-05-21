@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="VoidTouched"]/label</xpath>
+		<value>
+			<label>Void Presence</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="VoidTouched"]/description</xpath>
+		<value>
+			<description>This person has seen the depths of the void and rejected its power. Even though the void no longer permeates into reality, this person directly reaching into the void and severing the connection appears to have left vestiges of its power within them, and ascending them to newfound power, but without any impact on their psyche.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="VoidTouched"]/disablesNeeds</xpath>
+		<value>
+			<disablesNeeds>
+				<li>Rest</li>
+				<li>Food</li>
+			</disablesNeeds>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="VoidTouched"]/comps</xpath>
+		<value>
+			<comps>
+				 <li Class="HediffCompProperties_GiveAbility">
+					<abilityDefs>
+					<li>VoidTerror</li>
+					</abilityDefs>
+				</li>
+				<li Class="HediffCompProperties_GiveAbility">
+					<abilityDefs>
+					<li>PsychicSlaughter</li>
+					</abilityDefs>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+</Patch>

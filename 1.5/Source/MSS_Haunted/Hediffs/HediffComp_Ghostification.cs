@@ -149,10 +149,17 @@ public class HediffComp_Ghostification : HediffComp, Triggerable
         newPawn.Name = NameTriple.FromString(pawn.Name.ToString());
         if (ModsConfig.BiotechActive)
         {
-            newPawn.ageTracker.growthPoints = pawn.ageTracker.growthPoints;
-            newPawn.ageTracker.vatGrowTicks = pawn.ageTracker.vatGrowTicks;
-            newPawn.genes.xenotypeName = pawn.genes?.xenotypeName;
-            newPawn.genes.iconDef = pawn.genes?.iconDef;
+            if (newPawn.ageTracker != null)
+            {
+                newPawn.ageTracker.growthPoints = pawn.ageTracker.growthPoints;
+                newPawn.ageTracker.vatGrowTicks = pawn.ageTracker.vatGrowTicks;
+            }
+
+            if (newPawn.genes != null)
+            {
+                newPawn.genes.xenotypeName = pawn.genes?.xenotypeName;
+                newPawn.genes.iconDef = pawn.genes?.iconDef;
+            }
         }
         return PostGenPawnSetup(pawn, newPawn);
     }
